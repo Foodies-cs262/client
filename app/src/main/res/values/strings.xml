@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Cheferone</string>
+    <string name="breakfast_home">BREAKFAST</string>
+    <string name="lunch_home">LUNCH</string>
+    <string name="dinner_home">DINNER</string>
+    <string name="desert_home">DESSERT</string>
+    <string name="home_lunch_desc">Click to view lunch recipe</string>
+    <string name="home_desert_desc">Click to view desert recipe</string>
+    <string name="home_breakfast_desc">Click to view breakfast recipe list</string>
+    <string name="home_dinner_desc">Click to view dinner recipe</string>
 </resources>

@@ -7,9 +7,10 @@
     tools:context=".MainActivity">
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/image_breakfast"
         android:layout_width="wrap_content"
         android:layout_height="152dp"
+        android:contentDescription="@string/home_breakfast_desc"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -17,86 +18,89 @@
         app:srcCompat="@drawable/breakfast" />
 
     <ImageButton
-        android:id="@+id/imageButton3"
+        android:id="@+id/image_lunch"
         android:layout_width="wrap_content"
         android:layout_height="152dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton"
-        app:srcCompat="@drawable/lunch" />
+        app:layout_constraintTop_toBottomOf="@+id/image_breakfast"
+        app:srcCompat="@drawable/lunch"
+        android:contentDescription="@string/home_lunch_desc" />
 
     <ImageButton
-        android:id="@+id/imageButton4"
+        android:id="@+id/image_dinner"
         android:layout_width="wrap_content"
         android:layout_height="152dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton3"
-        app:srcCompat="@drawable/thanksgivingdinnergetty" />
+        app:layout_constraintTop_toBottomOf="@+id/image_lunch"
+        app:srcCompat="@drawable/thanksgivingdinnergetty"
+        android:contentDescription="@string/home_dinner_desc" />
 
     <ImageButton
-        android:id="@+id/imageButton8"
+        android:id="@+id/image_desert"
         android:layout_width="wrap_content"
         android:layout_height="152dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton4"
+        app:layout_constraintTop_toBottomOf="@+id/image_dinner"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/desert" />
+        app:srcCompat="@drawable/desert"
+        android:contentDescription="@string/home_desert_desc" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="BREAKFAST"
+        android:text="@string/breakfast_home"
         android:textColor="@android:color/white"
         android:textSize="30sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/imageButton3"
-        app:layout_constraintEnd_toEndOf="@+id/imageButton"
-        app:layout_constraintStart_toStartOf="@+id/imageButton"
-        app:layout_constraintTop_toTopOf="@+id/imageButton" />
+        app:layout_constraintBottom_toTopOf="@+id/image_lunch"
+        app:layout_constraintEnd_toEndOf="@+id/image_breakfast"
+        app:layout_constraintStart_toStartOf="@+id/image_breakfast"
+        app:layout_constraintTop_toTopOf="@+id/image_breakfast" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="LUNCH"
+        android:text="@string/lunch_home"
         android:textColor="@android:color/white"
         android:textSize="30sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/imageButton4"
+        app:layout_constraintBottom_toTopOf="@+id/image_dinner"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageButton3" />
+        app:layout_constraintTop_toTopOf="@+id/image_lunch" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="DINNER"
+        android:text="@string/dinner_home"
         android:textColor="@android:color/white"
         android:textSize="30sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/imageButton8"
-        app:layout_constraintEnd_toEndOf="@+id/imageButton4"
+        app:layout_constraintBottom_toTopOf="@+id/image_desert"
+        app:layout_constraintEnd_toEndOf="@+id/image_dinner"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageButton4" />
+        app:layout_constraintTop_toTopOf="@+id/image_dinner" />
 
     <TextView
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="DESSERT"
+        android:text="@string/desert_home"
         android:textColor="@android:color/white"
         android:textSize="30sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/imageButton8"
+        app:layout_constraintBottom_toBottomOf="@+id/image_desert"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageButton8" />
+        app:layout_constraintTop_toTopOf="@+id/image_desert" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
