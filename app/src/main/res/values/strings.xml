@@ -8,4 +8,6 @@
     <string name="home_desert_desc">Click to view desert recipe</string>
     <string name="home_breakfast_desc">Click to view breakfast recipe list</string>
     <string name="home_dinner_desc">Click to view dinner recipe</string>
+    <string name="recipe_placeholder_txt">add recipe description</string>
+    <string name="pic_recipe">recipe_picture</string>
 </resources>
