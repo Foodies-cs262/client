@@ -1,0 +1,6 @@
+// JavaScript Document
+function boilWater(water, pasta, pot){
+console.log("we are going to boil stuff" + water + "
+ounces of water with" + pasta + " in a " + pot +
+"ounce pot);
+:
