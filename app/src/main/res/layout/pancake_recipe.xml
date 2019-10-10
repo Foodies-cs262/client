@@ -72,7 +72,7 @@
         android:layout_marginTop="44dp"
         android:layout_marginEnd="24dp"
         android:layout_marginRight="24dp"
-        android:text="Recipe Description"
+        android:text="Recipe Description (WIP)"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/imageView"
