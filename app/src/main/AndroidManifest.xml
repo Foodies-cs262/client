@@ -19,6 +19,7 @@
         <activity android:name=".Breakfast"></activity>
         <activity android:name=".Dinner"></activity>
         <activity android:name=".Dessert"></activity>
+        <activity android:name=".Lunch"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
