@@ -46,6 +46,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        myImageButton = findViewById((R.id.image_lunch));
 
+        myImageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intentLoadActivity = new Intent (MainActivity.this, Lunch.class);
+                startActivity(intentLoadActivity);
+            }
+        });
     }
 }
