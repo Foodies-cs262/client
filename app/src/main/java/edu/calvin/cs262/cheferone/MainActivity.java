@@ -56,4 +56,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
+    public void shoppingList(View view) {
+
+        Intent intent = new Intent(this, shoppingList.class);
+        startActivity(intent);
+    }
 }
