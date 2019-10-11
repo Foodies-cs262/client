@@ -1,14 +1,14 @@
 package edu.calvin.cs262.cheferone;
 
-import android.os.Bundle;
-
 import androidx.appcompat.app.AppCompatActivity;
 
-public class Desert extends AppCompatActivity {
+import android.os.Bundle;
+
+public class menu_activity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_desert);
+        setContentView(R.layout.activity_menu_activity);
     }
 }
