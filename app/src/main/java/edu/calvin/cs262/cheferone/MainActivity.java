@@ -16,8 +16,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //when breakfast button clicked, open the breakfast activity
         myImageButton = findViewById(R.id.image_breakfast);
-
         myImageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -26,8 +26,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //when the dinner button is clicked, open the dinner activity
         myImageButton = findViewById(R.id.image_dinner);
-
         myImageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -36,7 +36,25 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //when the dessert button is clicked, open the dessert activity
+        myImageButton = findViewById(R.id.image_dessert);
+        myImageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intentLoadActivity = new Intent (MainActivity.this, Dessert.class);
+                startActivity(intentLoadActivity);
+            }
+        });
 
+        myImageButton = findViewById((R.id.image_lunch));
+
+        myImageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intentLoadActivity = new Intent (MainActivity.this, Lunch.class);
+                startActivity(intentLoadActivity);
+            }
+        });
     }
 
     public void shoppingList(View view) {
