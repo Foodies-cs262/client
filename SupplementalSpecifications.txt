@@ -1,0 +1,20 @@
+Usability: 
+- The basic tasks will be to browse/search multiple recipes and their contents, to add desired recipes to a planner,
+  to see your added recipes in that planner, and to see a combined list of ingredients from your added recipes
+- The interface will be simple and recognizable. The foodies will take inspiration from other food apps to create
+  familiarity for the users. 
+- The number of different buttons will be kept to a minimum and the buttons will have obvious connotations around
+  them such as the magnifying glass for the search function and the plus sign for the add recipe.
+Reliability:
+- Basic functions - browse recipes, view recipes, add recipes, etc will work as expected and if there are errors 
+  it will be properly handled.
+- the app will work as long as the user has internet and as long as there is no problems on the spoonacular side
+  (the api being used to get the recipe data).
+Performance: 
+- As long as there is a good network to be connected to, all of Cheferone will run smoothly. Wait times should
+  never exceed 5 seconds.
+- Due to there not being any interaction between users and all the data being kept on the users phone and on the
+  spoonacular database, the number of users is only limited by how many users/api calls spoonacular can handle. 
+Supportability: 
+- Cheferone will be available on the Google Play Store. 
+- Any failures in the app will be attended to by the Foodies team within 48 hours.
