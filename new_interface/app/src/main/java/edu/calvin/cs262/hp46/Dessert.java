@@ -20,7 +20,13 @@ public class Dessert  extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dessert);
 
-
+        //Attempt to send data to fragement//
+/*        Bundle bundle = new Bundle();
+        bundle.putString("edttext", "From Activity");
+    // set Fragmentclass Arguments
+        HomeFragment fragobj = new HomeFragment();
+        fragobj.setArguments(bundle);
+*/
 
 
         myImageButton = findViewById(R.id.image_pancake);
