@@ -21,17 +21,7 @@ public class Dessert  extends AppCompatActivity {
         setContentView(R.layout.activity_dessert);
 
 
-        //uses picasso, not working right now
-      /*  String imageUri = "https://spoonacular.com/recipeImages/1023800-556x370.jpg";
-        myImageView  = findViewById(R.id.imageView3);
-        Picasso.with(this).load(imageUri).into(myImageView);
 
-
-        // private void setListParentItemInfo(View convertView,final IPTVChannel iptvChannel){
-        myImageButton = findViewById(R.id.image_pancake);
-        String image_url="https://spoonacular.com/recipeImages/1023800-556x370.jpg";
-        Picasso.with(this).load(image_url).into(myImageButton);
-*/
 
         myImageButton = findViewById(R.id.image_pancake);
 
