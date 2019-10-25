@@ -2,6 +2,7 @@ package edu.calvin.cs262.hp46;
 
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ExpandableListView;
@@ -50,13 +51,13 @@ public class Lunch extends AppCompatActivity {
         headerData.add("Western");
 
         //adding countries to Asian continent
-        childDataModel = new ChildDataModel(1,"Pancake",R.drawable.fluffypancakes);
+        childDataModel = new ChildDataModel(1,"Pancake",R.drawable.fluffypancakes,"https://www.allrecipes.com/recipe/21014/good-old-fashioned-pancakes/");
         westernLunch.add(childDataModel);
 
-        childDataModel = new ChildDataModel(2,"Toast",R.drawable.cinnamon_french_toast);
+        childDataModel = new ChildDataModel(2,"Toast",R.drawable.cinnamon_french_toast, "https://www.allrecipes.com/recipe/7016/french-toast-i/");
         westernLunch.add(childDataModel);
 
-        childDataModel = new ChildDataModel(3,"Eggs & Bacon",R.drawable.eggs_bacon);
+        childDataModel = new ChildDataModel(3,"Eggs & Bacon",R.drawable.eggs_bacon, "https://www.allrecipes.com/recipe/236040/bacon-and-egg-muffins/");
         westernLunch.add(childDataModel);
 
         childData.put(headerData.get(0),westernLunch);
@@ -97,14 +98,33 @@ public class Lunch extends AppCompatActivity {
             public boolean onChildClick(ExpandableListView expandableListView, View view, int headPosition, int childPosition, long id) {
                 Toast.makeText(mContext,
                         headerData.get(headPosition)
-                                + " has country "
+                                + " has food recipe "
                                 + childData.get(
                                 headerData.get(headPosition)).get(
                                 childPosition).getTitle(), Toast.LENGTH_SHORT)
                         .show();
                 // temporary placeholder until I understand how everything works better
-                Intent intentLoadActivity = new Intent (Lunch.this, Pancake.class);
-                startActivity(intentLoadActivity);
+//                Intent intentLoadActivity = new Intent (Lunch.this, Pancake.class);
+//                startActivity(intentLoadActivity);
+
+                //uses picasso, not working right now
+              /*  String imageUri = "https://spoonacular.com/recipeImages/1023800-556x370.jpg";
+                myImageView  = findViewById(R.id.imageView3);
+                Picasso.with(this).load(imageUri).into(myImageView);
+
+
+                // private void setListParentItemInfo(View convertView,final IPTVChannel iptvChannel){
+                myImageButton = findViewById(R.id.image_pancake);
+                String image_url="https://spoonacular.com/recipeImages/1023800-556x370.jpg";
+                Picasso.with(this).load(image_url).into(myImageButton);
+                */
+
+              // Links recipe list with appropriate URI
+                Intent intent = new Intent();
+                intent.setAction(Intent.ACTION_VIEW);
+                intent.addCategory(Intent.CATEGORY_BROWSABLE);
+                intent.setData(Uri.parse(childData.get(headerData.get(headPosition)).get(childPosition).getUri()));
+                startActivity(intent);
                 return false;
             }
         });
