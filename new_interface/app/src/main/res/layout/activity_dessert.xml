@@ -7,6 +7,58 @@
     tools:context=".Dessert">
 
     <ImageButton
+        android:id="@+id/image_pancake3"
+        android:layout_width="match_parent"
+        android:layout_height="145dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/ic_launcher_background"
+        android:paddingTop="32sp"
+        android:scaleType="centerCrop"
+        android:textColor="#FFFFFF"
+        app:srcCompat="@drawable/pancakes"
+        tools:layout_editor_absoluteX="36dp"
+        tools:layout_editor_absoluteY="290dp" />
+
+    <ImageButton
+        android:id="@+id/image_pancake4"
+        android:layout_width="match_parent"
+        android:layout_height="145dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/ic_launcher_background"
+        android:paddingTop="32sp"
+        android:scaleType="centerCrop"
+        android:textColor="#FFFFFF"
+        app:srcCompat="@drawable/pancakes"
+        tools:layout_editor_absoluteX="38dp"
+        tools:layout_editor_absoluteY="435dp" />
+
+    <ImageButton
+        android:id="@+id/image_pancake2"
+        android:layout_width="match_parent"
+        android:layout_height="145dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/ic_launcher_background"
+        android:paddingTop="32sp"
+        android:scaleType="centerCrop"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/pancakes"
+        tools:layout_editor_absoluteY="145dp" />
+
+    <ImageButton
+        android:id="@+id/image_pancake14"
+        android:layout_width="match_parent"
+        android:layout_height="145dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/ic_launcher_background"
+        android:paddingTop="32sp"
+        android:scaleType="centerCrop"
+        android:textColor="#FFFFFF"
+        app:srcCompat="@drawable/pancakes" />
+
+    <ImageButton
         android:id="@+id/image_pancake"
         android:layout_width="match_parent"
         android:layout_height="145dp"
