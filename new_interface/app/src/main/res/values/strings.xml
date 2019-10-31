@@ -7,8 +7,6 @@
     <string name="title_shopping_list">Shopping list</string>
     <string name="breakfast_home">BREAKFAST</string>
     <string name="lunch_home">LUNCH</string>
-    <string name="dinner_home">DINNER</string>
-    <string name="dessert_home">DESSERT</string>
     <string name="home_lunch_desc">Click to view lunch recipe</string>
     <string name="home_dessert_desc">Click to view dessert recipe</string>
     <string name="home_breakfast_desc">Click to view breakfast recipe list</string>

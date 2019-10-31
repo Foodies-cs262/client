@@ -15,8 +15,6 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
 import edu.calvin.cs262.hp46.Breakfast;
-import edu.calvin.cs262.hp46.Dessert;
-import edu.calvin.cs262.hp46.Dinner;
 import edu.calvin.cs262.hp46.Lunch;
 import edu.calvin.cs262.hp46.R;
 
@@ -47,25 +45,6 @@ public class CategoriesFragment extends Fragment {
                     }
                 });
 
-                //when the dinner button is clicked, open the dinner activity
-                myImageButton = getView().findViewById(R.id.image_dinner);
-                myImageButton.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        Intent intentLoadActivity = new Intent (getActivity(), Dinner.class);
-                        startActivity(intentLoadActivity);
-                    }
-                });
-
-                //when the dessert button is clicked, open the dessert activity
-                myImageButton = getView().findViewById(R.id.image_dessert);
-                myImageButton.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        Intent intentLoadActivity = new Intent (getActivity(), Dessert.class);
-                        startActivity(intentLoadActivity);
-                    }
-                });
 
                 myImageButton = getView().findViewById((R.id.image_lunch));
                 myImageButton.setOnClickListener(new View.OnClickListener() {
