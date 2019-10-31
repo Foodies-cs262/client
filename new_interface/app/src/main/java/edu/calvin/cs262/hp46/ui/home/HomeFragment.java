@@ -1,11 +1,9 @@
 package edu.calvin.cs262.hp46.ui.home;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
@@ -14,11 +12,6 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
-import edu.calvin.cs262.hp46.Breakfast;
-
-import edu.calvin.cs262.hp46.Dessert;
-import edu.calvin.cs262.hp46.Dinner;
-import edu.calvin.cs262.hp46.Lunch;
 import edu.calvin.cs262.hp46.R;
 
 public class HomeFragment extends Fragment {
