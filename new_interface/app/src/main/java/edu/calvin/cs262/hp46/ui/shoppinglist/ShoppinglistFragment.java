@@ -23,13 +23,7 @@ public class ShoppinglistFragment extends Fragment {
         shoppinglistViewModel =
                 ViewModelProviders.of(this).get(ShoppinglistViewModel.class);
         View root = inflater.inflate(R.layout.fragment_shoppinglist, container, false);
-        final TextView textView = root.findViewById(R.id.text_shoppinglist);
-        shoppinglistViewModel.getText().observe(this, new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });
+
         return root;
     }
 }

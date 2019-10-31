@@ -11,6 +11,7 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
+
 public class NetworkUtils {
     // network class
     private static final String LOG_TAG = NetworkUtils.class.getSimpleName();
@@ -21,7 +22,7 @@ public class NetworkUtils {
         HttpURLConnection httpURLConnection = null;
         BufferedReader bufferedReader = null;
         String htmlSourceCode = null;
-        String[] protocol = context.getResources().getStringArray(R.array.http_array);
+        String[] protocol = context.getResources().getStringArray(R.array.array);
         try{
             Uri builder;
             if (transferProtocol.equals(protocol[0])){

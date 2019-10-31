@@ -29,11 +29,9 @@ public class CategoriesFragment extends Fragment {
         categoriesViewModel =
                 ViewModelProviders.of(this).get(CategoriesViewModel.class);
         View root = inflater.inflate(R.layout.fragment_categories, container, false);
-        final TextView textView = root.findViewById(R.id.text_categories);
         categoriesViewModel.getText().observe(this, new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
-                textView.setText(s);
 
                 //when breakfast button clicked, open the breakfast activity
                 myImageButton = getView().findViewById(R.id.image_breakfast);

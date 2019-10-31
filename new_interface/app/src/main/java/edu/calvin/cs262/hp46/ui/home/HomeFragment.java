@@ -27,14 +27,6 @@ public class HomeFragment extends Fragment {
             String strtext = getArguments().getString("edttext");
     return inflater.inflate(R.layout.fragment, container, false);
          */
-        final TextView textView = root.findViewById(R.id.text_home);
-        homeViewModel.getText().observe(this, new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-
-            }
-        });
         return root;
     }
 }

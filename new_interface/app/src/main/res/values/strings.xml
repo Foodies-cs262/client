@@ -12,4 +12,8 @@
     <string name="home_breakfast_desc">Click to view breakfast recipe list</string>
     <string name="home_dinner_desc">Click to view dinner recipe</string>
     <string name="planner">PLANNER:</string>
+    <string-array name="array">
+        <item>http://</item>
+        <item>https://</item>
+    </string-array>
 </resources>
