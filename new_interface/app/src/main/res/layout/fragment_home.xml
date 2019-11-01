@@ -3,137 +3,51 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
 
     <TextView
-        android:id="@+id/text_home"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
+        android:id="@+id/planner_title"
+        android:layout_width="289dp"
+        android:layout_height="71dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="40dp"
+        android:background="#00FFFFFF"
+        android:clickable="false"
+        android:gravity="left"
+        android:text="Food List"
+        android:textAllCaps="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:typeface="normal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/select_category"
-        android:layout_width="wrap_content"
-        android:layout_height="24dp"
-        android:layout_marginStart="120dp"
-        android:layout_marginLeft="120dp"
-        android:layout_marginTop="32dp"
-        android:text="select category :"
-        android:textAllCaps="true"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/image_breakfast"
+        android:id="@+id/list_result"
+        android:layout_width="333dp"
+        android:layout_height="368dp"
+        android:layout_marginTop="68dp"
+        android:hint="CURRETNLY EMPTY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/planner_title" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="82dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="304dp"
+        android:layout_marginRight="304dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.623" />
-
-    <ImageButton
-        android:id="@+id/image_breakfast"
-        android:layout_width="78dp"
-        android:layout_height="76dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginLeft="60dp"
-        android:layout_marginTop="116dp"
-        android:background="#FFFFFF"
-        android:contentDescription="@string/home_breakfast_desc"
-        android:scaleType="centerInside"
-        android:scrollbarAlwaysDrawHorizontalTrack="false"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/select_category"
-        app:srcCompat="@drawable/breakfast_icon" />
-
-    <TextView
-        android:id="@+id/string_lunch"
-        android:layout_width="80dp"
-        android:layout_height="20dp"
-        android:layout_marginEnd="60dp"
-        android:layout_marginRight="60dp"
-        android:gravity="center"
-        android:text="@string/lunch_home"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/image_lunch" />
-
-    <ImageButton
-        android:id="@+id/image_dinner"
-        android:layout_width="76dp"
-        android:layout_height="74dp"
-        android:layout_marginStart="64dp"
-        android:layout_marginLeft="64dp"
-        android:background="#FFFFFF"
-        android:contentDescription="@string/home_dinner_desc"
-        android:scaleType="centerInside"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/string_breakfast"
-        app:layout_constraintVertical_bias="0.426"
-        app:srcCompat="@drawable/dinner_icon" />
-
-    <ImageButton
-        android:id="@+id/image_lunch"
-        android:layout_width="79dp"
-        android:layout_height="76dp"
-        android:layout_marginTop="116dp"
-        android:layout_marginEnd="64dp"
-        android:layout_marginRight="64dp"
-        android:background="#FFFFFF"
-        android:contentDescription="@string/home_lunch_desc"
-        android:scaleType="centerInside"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/select_category"
-        app:srcCompat="@drawable/lunch_icon" />
-
-    <ImageButton
-        android:id="@+id/image_dessert"
-        android:layout_width="77dp"
-        android:layout_height="76dp"
-        android:layout_marginEnd="60dp"
-        android:layout_marginRight="60dp"
-        android:background="#FFFFFF"
-        android:contentDescription="@string/home_dessert_desc"
-        android:scaleType="centerInside"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/string_lunch"
-        app:layout_constraintVertical_bias="0.424"
-        app:srcCompat="@drawable/dessert_icon" />
-
-    <TextView
-        android:id="@+id/string_breakfast"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="64dp"
-        android:layout_marginLeft="64dp"
-        android:text="@string/breakfast_home"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/image_breakfast" />
-
-    <TextView
-        android:id="@+id/string_dessert"
-        android:layout_width="76dp"
-        android:layout_height="16dp"
-        android:layout_marginEnd="64dp"
-        android:layout_marginRight="64dp"
-        android:gravity="center"
-        android:text="@string/dessert_home"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/image_dessert" />
-
-    <TextView
-        android:id="@+id/string_dinner"
-        android:layout_width="83dp"
-        android:layout_height="15dp"
-        android:layout_marginStart="64dp"
-        android:layout_marginLeft="64dp"
-        android:gravity="center|center_horizontal"
-        android:text="@string/dinner_home"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/image_dinner" />
+        app:srcCompat="@drawable/planner_icon" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

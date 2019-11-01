@@ -6,12 +6,76 @@
     android:layout_height="match_parent"
     tools:context=".Breakfast">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Breakfast"
+    <ImageButton
+        android:id="@+id/image_pancake12"
+        android:layout_width="match_parent"
+        android:layout_height="145dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/ic_launcher_background"
+        android:paddingTop="32sp"
+        android:scaleType="centerCrop"
+        android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="100dp" />
+        app:srcCompat="@drawable/pancakes"
+        tools:layout_editor_absoluteY="145dp" />
+
+    <ImageButton
+        android:id="@+id/image_pancake11"
+        android:layout_width="match_parent"
+        android:layout_height="145dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/ic_launcher_background"
+        android:paddingTop="32sp"
+        android:scaleType="centerCrop"
+        android:textColor="#FFFFFF"
+        app:srcCompat="@drawable/pancakes" />
+
+    <ImageButton
+        android:id="@+id/image_pancake13"
+        android:layout_width="match_parent"
+        android:layout_height="145dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/ic_launcher_background"
+        android:paddingTop="32sp"
+        android:scaleType="centerCrop"
+        android:textColor="#FFFFFF"
+        app:srcCompat="@drawable/pancakes" />
+
+    <ImageButton
+        android:id="@+id/image_pancake15"
+        android:layout_width="match_parent"
+        android:layout_height="145dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/ic_launcher_background"
+        android:paddingTop="32sp"
+        android:scaleType="centerCrop"
+        android:textColor="#FFFFFF"
+        app:srcCompat="@drawable/pancakes" />
+
+    <ImageButton
+        android:id="@+id/image_pancake10"
+        android:layout_width="match_parent"
+        android:layout_height="145dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/ic_launcher_background"
+        android:paddingTop="32sp"
+        android:scaleType="centerCrop"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/pancakes"
+        tools:layout_editor_absoluteY="435dp" />
+
+    <ImageButton
+        android:id="@+id/image_pancake9"
+        android:layout_width="match_parent"
+        android:layout_height="145dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/ic_launcher_background"
+        android:paddingTop="32sp"
+        android:scaleType="centerCrop"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/pancakes"
+        tools:layout_editor_absoluteY="290dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
