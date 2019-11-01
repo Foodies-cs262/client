@@ -10,10 +10,13 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentTransaction;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+
+import edu.calvin.cs262.hp46.ui.home.HomeFragment;
 
 // Expandable ListView from http://tutorialscache.com/expandable-listview-android-tutorials/
 public class Lunch extends AppCompatActivity {
@@ -125,6 +128,11 @@ public class Lunch extends AppCompatActivity {
                 intent.addCategory(Intent.CATEGORY_BROWSABLE);
                 intent.setData(Uri.parse(childData.get(headerData.get(headPosition)).get(childPosition).getUri()));
                 startActivity(intent);
+
+                HomeFragment fragmentB = new HomeFragment();
+                Bundle bundle = new Bundle();
+                bundle.putString("recipe", childData.get(headerData.get(headPosition)).get(childPosition).getTitle());
+                fragmentB.setArguments(bundle);
                 return false;
             }
         });
