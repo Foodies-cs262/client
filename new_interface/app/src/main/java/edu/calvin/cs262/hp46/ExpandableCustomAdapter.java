@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -89,6 +90,9 @@ public class ExpandableCustomAdapter extends BaseExpandableListAdapter{
 
         TextView childTv = (TextView) view.findViewById(R.id.childTv);
         ImageView childImg = (ImageView) view.findViewById(R.id.childImg);
+        ImageButton childButton = (ImageButton) view.findViewById(R.id.childButton);
+
+        childButton.setFocusable(false);
 
         childTv.setText(child.getTitle());
         childImg.setImageResource(child.getImage());
