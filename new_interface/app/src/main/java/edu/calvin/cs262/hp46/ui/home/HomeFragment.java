@@ -28,7 +28,18 @@ public class HomeFragment extends Fragment {
         /*
             String strtext = getArguments().getString("edttext");
     return inflater.inflate(R.layout.fragment, container, false);
+<<<<<<< HEAD
          */
+=======
+
+
+        LayoutInflater lf = getActivity().getLayoutInflater();
+        View view =  lf.inflate(R.layout.fragment_home, container, false);
+
+        TextView mTextView = (TextView) getView().findViewById(R.id.list_result);
+        mTextView.setText(getArguments().getString("recipe"));
+*/
+>>>>>>> b562163cbb99d72a567cd585c9d47eda7e408406
         return root;
     }
 }
