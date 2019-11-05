@@ -88,9 +88,9 @@ public class ExpandableCustomAdapter extends BaseExpandableListAdapter{
             view = layoutInflater.inflate(R.layout.child_item, null);
         }
 
-        TextView childTv = (TextView) view.findViewById(R.id.childTv);
-        ImageView childImg = (ImageView) view.findViewById(R.id.childImg);
-        ImageButton childButton = (ImageButton) view.findViewById(R.id.childButton);
+        TextView childTv = view.findViewById(R.id.childTv);
+        ImageView childImg = view.findViewById(R.id.childImg);
+        ImageButton childButton = view.findViewById(R.id.childButton);
 
         childButton.setFocusable(false);
 
@@ -102,5 +102,12 @@ public class ExpandableCustomAdapter extends BaseExpandableListAdapter{
     @Override
     public boolean isChildSelectable(int headPosition, int childPosition) {
         return true;
+    }
+
+    public void setNewItems(List<String> headerData,
+                            HashMap<String, ArrayList<ChildDataModel>> childData) {
+        this.headerData = headerData;
+        this.childData = childData;
+        notifyDataSetChanged(); // put this on the onClick for search function
     }
 }
