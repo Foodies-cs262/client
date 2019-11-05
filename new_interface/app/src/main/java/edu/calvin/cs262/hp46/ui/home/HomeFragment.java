@@ -28,14 +28,15 @@ public class HomeFragment extends Fragment {
         /*
             String strtext = getArguments().getString("edttext");
     return inflater.inflate(R.layout.fragment, container, false);
+<<<<<<< HEAD
+         */
 
+//        LayoutInflater lf = getActivity().getLayoutInflater();
+//        View view =  lf.inflate(R.layout.fragment_home, container, false);
+//
+//        TextView mTextView = (TextView) getView().findViewById(R.id.list_result);
+//        mTextView.setText(getArguments().getString("recipe"));
 
-        LayoutInflater lf = getActivity().getLayoutInflater();
-        View view =  lf.inflate(R.layout.fragment_home, container, false);
-
-        TextView mTextView = (TextView) getView().findViewById(R.id.list_result);
-        mTextView.setText(getArguments().getString("recipe"));
-*/
         return root;
     }
 }

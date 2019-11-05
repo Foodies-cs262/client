@@ -2,21 +2,24 @@ package edu.calvin.cs262.hp46;
 
 import android.util.Log;
 
-import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ChildDataModel {
 
-    long id;
-    int image;
-    String title;
-    String uri;
-    // Array ingredient; - may be used for the incorporating ingredient to the recipe
+    private long id;
+    private int image;
+    private String title;
+    private String uri;
+    private List<Ingredient> ingredient;
 
-    public ChildDataModel(int id, String country, int image, String uri) {
+
+    public ChildDataModel(int id, String recipe, int image, String uri, List<Ingredient> ingredient) {
         this.setId(id);
-        this.setTitle(country);
+        this.setTitle(recipe);
         this.setImage(image);
         this.setUri(uri);
+        this.setIngredient(ingredient);
     }
 
     public int getImage() {
@@ -46,6 +49,10 @@ public class ChildDataModel {
     public String getUri() { return uri; }
 
     public void setUri( String uri) { this.uri = uri; }
+
+    public List<Ingredient> getIngredient() { return new ArrayList<>(ingredient); };
+
+    public void setIngredient (List<Ingredient> ingredient) { this.ingredient = ingredient; };
 
     @Override
     public String toString() {
