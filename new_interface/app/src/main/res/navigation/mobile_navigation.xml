@@ -3,19 +3,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
+    app:startDestination="@+id/navigation_home"
+    android:background="@android:color/white">
 
     <fragment
         android:id="@+id/navigation_home"
         android:name="edu.calvin.cs262.hp46.ui.home.HomeFragment"
-        android:label="@string/title_home"
+        android:label="@string/title_planner"
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/navigation_planner"
-        android:name="edu.calvin.cs262.hp46.ui.planner.PlannerFragment"
-        android:label="@string/title_planner"
-        tools:layout="@layout/fragment_planner" />
+        android:id="@+id/navigation_categories"
+        android:name="edu.calvin.cs262.hp46.ui.planner.CategoriesFragment"
+        android:label="@string/title_categories"
+        tools:layout="@layout/fragment_categories" />
 
     <fragment
         android:id="@+id/navigation_search"

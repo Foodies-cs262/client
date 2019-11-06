@@ -9,7 +9,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-<<<<<<< HEAD
         <activity android:name=".shoppingList"
             android:label="Shoping List"
             android:parentActivityName=".MainActivity"></activity>
@@ -17,17 +16,14 @@
             android:name=".menu_activity"
             android:label="Recipe"
             android:parentActivityName=".Breakfast" />
-        <activity android:name=".Breakfast" />
-        <activity android:name=".Dinner" />
-=======
         <activity android:name=".Breakfast"></activity>
         <activity android:name=".Dinner"></activity>
         <activity android:name=".Dessert"></activity>
->>>>>>> master
+        <activity android:name=".Lunch"></activity>
+        <activity android:name=".Pancake"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
+                <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

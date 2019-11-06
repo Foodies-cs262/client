@@ -4,11 +4,11 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class PlannerViewModel extends ViewModel {
+public class CategoriesViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;
 
-    public PlannerViewModel() {
+    public CategoriesViewModel() {
         mText = new MutableLiveData<>();
         mText.setValue("This is Planner fragment");
     }

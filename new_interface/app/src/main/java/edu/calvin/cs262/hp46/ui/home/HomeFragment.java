@@ -12,6 +12,8 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
+import org.w3c.dom.Text;
+
 import edu.calvin.cs262.hp46.R;
 
 public class HomeFragment extends Fragment {
@@ -23,13 +25,18 @@ public class HomeFragment extends Fragment {
         homeViewModel =
                 ViewModelProviders.of(this).get(HomeViewModel.class);
         View root = inflater.inflate(R.layout.fragment_home, container, false);
-        final TextView textView = root.findViewById(R.id.text_home);
-        homeViewModel.getText().observe(this, new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });
+        /*
+            String strtext = getArguments().getString("edttext");
+    return inflater.inflate(R.layout.fragment, container, false);
+<<<<<<< HEAD
+         */
+
+//        LayoutInflater lf = getActivity().getLayoutInflater();
+//        View view =  lf.inflate(R.layout.fragment_home, container, false);
+//
+//        TextView mTextView = (TextView) getView().findViewById(R.id.list_result);
+//        mTextView.setText(getArguments().getString("recipe"));
+
         return root;
     }
 }

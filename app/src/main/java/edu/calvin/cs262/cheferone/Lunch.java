@@ -120,7 +120,7 @@ public class Lunch extends AppCompatActivity {
                 }
                 lastExpandedPosition = headPosition;
                 Toast.makeText(mContext,
-                        headerData.get(headPosition) + " continent expanded",
+                        headerData.get(headPosition) + " menu expanded",
                         Toast.LENGTH_SHORT).show();
             }
         });
@@ -130,7 +130,7 @@ public class Lunch extends AppCompatActivity {
             @Override
             public void onGroupCollapse(int headPosition) {
                 Toast.makeText(mContext,
-                        headerData.get(headPosition) + " continent collapsed",
+                        headerData.get(headPosition) + " menu collapsed",
                         Toast.LENGTH_SHORT).show();
             }
         });
