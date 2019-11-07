@@ -15,7 +15,9 @@ public class Ingredient {
         return ingriName;
     }
 
-    public void setName(String ingriName) { this.ingriName = ingriName; }
+    public void setName(String ingriName) {
+        this.ingriName = ingriName;
+    }
 
     public long getAmount() {
         return ingriAmount;
@@ -29,5 +31,7 @@ public class Ingredient {
         return ingriUnit;
     }
 
-    public void setUnit(String ingriUnit) { this.ingriUnit = ingriUnit; }
+    public void setUnit(String ingriUnit) {
+        this.ingriUnit = ingriUnit;
+    }
 }
