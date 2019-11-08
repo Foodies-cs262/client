@@ -3,16 +3,17 @@ package edu.calvin.cs262.hp46;
 import android.os.Bundle;
 import android.widget.ImageButton;
 
-import com.google.android.material.bottomnavigation.BottomNavigationView;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+
 public class MainActivity extends AppCompatActivity {
 
+    public String FoodName;
     ImageButton myImageButton;
 
     @Override
@@ -32,5 +33,6 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
 
 }
