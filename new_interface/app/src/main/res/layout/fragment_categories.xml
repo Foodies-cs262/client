@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:background="@android:color/white">
 
+<<<<<<< HEAD
 <!--    <TextView-->
 <!--        android:id="@+id/select_category"-->
 <!--        android:layout_width="wrap_content"-->
@@ -157,5 +158,7 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/divider3" />
+=======
+>>>>>>> ca49d878b9a8c4abff31a178aedc0aace1e166bc
 
 </androidx.constraintlayout.widget.ConstraintLayout>

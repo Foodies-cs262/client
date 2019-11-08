@@ -17,10 +17,10 @@
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.576"
+        app:layout_constraintHorizontal_bias="0.57"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.562" />
 
     <ImageView
         android:id="@+id/searchButton"
@@ -28,15 +28,15 @@
         android:layout_height="25dp"
         android:layout_marginStart="63dp"
         android:layout_marginLeft="63dp"
+        android:layout_marginTop="53dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginBottom="506dp"
+        android:layout_marginBottom="524dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/search_text"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.388"
         app:srcCompat="@drawable/searchicon" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

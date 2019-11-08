@@ -17,18 +17,18 @@ import androidx.lifecycle.ViewModelProviders;
 import edu.calvin.cs262.hp46.Breakfast;
 import edu.calvin.cs262.hp46.Lunch;
 import edu.calvin.cs262.hp46.R;
+import edu.calvin.cs262.hp46.ui.home.HomeViewModel;
 
 public class CategoriesFragment extends Fragment {
 
     private CategoriesViewModel categoriesViewModel;
-    ImageButton myImageButton;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-
         categoriesViewModel =
                 ViewModelProviders.of(this).get(CategoriesViewModel.class);
         View root = inflater.inflate(R.layout.fragment_categories, container, false);
+<<<<<<< HEAD
 //        categoriesViewModel.getText().observe(this, new Observer<String>() {
 //            @Override
 //            public void onChanged(@Nullable String s) {
@@ -55,6 +55,9 @@ public class CategoriesFragment extends Fragment {
 //
 //            }
 //        });
+=======
+
+>>>>>>> ca49d878b9a8c4abff31a178aedc0aace1e166bc
         return root;
     }
 }
