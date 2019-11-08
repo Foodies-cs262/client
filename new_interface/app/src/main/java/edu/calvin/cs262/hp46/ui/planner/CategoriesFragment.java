@@ -29,32 +29,32 @@ public class CategoriesFragment extends Fragment {
         categoriesViewModel =
                 ViewModelProviders.of(this).get(CategoriesViewModel.class);
         View root = inflater.inflate(R.layout.fragment_categories, container, false);
-        categoriesViewModel.getText().observe(this, new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-
-                //when breakfast button clicked, open the breakfast activity
-                myImageButton = getView().findViewById(R.id.image_breakfast);
-                myImageButton.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        Intent intentLoadActivity = new Intent (getActivity(), Breakfast.class);
-                        startActivity(intentLoadActivity);
-                    }
-                });
-
-
-                myImageButton = getView().findViewById((R.id.image_lunch));
-                myImageButton.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        Intent intentLoadActivity = new Intent (getActivity(), Lunch.class);
-                        startActivity(intentLoadActivity);
-                    }
-                });
-
-            }
-        });
+//        categoriesViewModel.getText().observe(this, new Observer<String>() {
+//            @Override
+//            public void onChanged(@Nullable String s) {
+//
+//                //when breakfast button clicked, open the breakfast activity
+//                myImageButton = getView().findViewById(R.id.image_breakfast);
+//                myImageButton.setOnClickListener(new View.OnClickListener() {
+//                    @Override
+//                    public void onClick(View view) {
+//                        Intent intentLoadActivity = new Intent (getActivity(), Breakfast.class);
+//                        startActivity(intentLoadActivity);
+//                    }
+//                });
+//
+//
+//                myImageButton = getView().findViewById((R.id.image_lunch));
+//                myImageButton.setOnClickListener(new View.OnClickListener() {
+//                    @Override
+//                    public void onClick(View view) {
+//                        Intent intentLoadActivity = new Intent (getActivity(), Lunch.class);
+//                        startActivity(intentLoadActivity);
+//                    }
+//                });
+//
+//            }
+//        });
         return root;
     }
 }

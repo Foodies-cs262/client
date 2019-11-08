@@ -16,7 +16,7 @@ import edu.calvin.cs262.hp46.SharedViewModel;
 public class HomeFragment extends Fragment {
 
     private HomeViewModel homeViewModel;
-    private TextView tv;
+    //private TextView tv;
 
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -24,10 +24,10 @@ public class HomeFragment extends Fragment {
         homeViewModel =
                 ViewModelProviders.of(this).get(HomeViewModel.class);
         View root = inflater.inflate(R.layout.fragment_home, container, false);
-        super.onCreate(savedInstanceState);
+        //super.onCreate(savedInstanceState);
         SharedViewModel model = ViewModelProviders.of(getActivity()).get(SharedViewModel.class);
-        tv = (TextView)getView().findViewById(R.id.list_result);
-        model.getSelected().observe(this,  item -> {tv.setText("hi")        });
+        //tv = (TextView)getView().findViewById(R.id.list_result);
+        //model.getSelected().observe(this,  item -> {tv.setText("hi")        });
 
 
         /*

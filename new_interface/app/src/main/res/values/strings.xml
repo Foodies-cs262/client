@@ -17,4 +17,7 @@
         <item>https://</item>
     </string-array>
     <string name="action_settings">Settings</string>
+    <string name="egss">Eggs and Bacon</string>
+    <string name="steak">Best Steak Marinade in Existence</string>
+    <string name="lamn">Roasted Rack of Lamb</string>
 </resources>
