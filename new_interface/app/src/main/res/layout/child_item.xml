@@ -22,7 +22,7 @@
         android:textColor="#000"
         android:textSize="20dp" />
 
-    <ImageButton
+    <ImageView
         android:id="@+id/childButton"
         android:layout_width="49dp"
         android:layout_height="38dp"

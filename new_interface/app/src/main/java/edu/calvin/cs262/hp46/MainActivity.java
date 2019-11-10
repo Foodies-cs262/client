@@ -5,20 +5,31 @@ import android.widget.ImageButton;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import androidx.appcompat.app.ActionBar;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+
 public class MainActivity extends AppCompatActivity {
 
+    public String FoodName;
     ImageButton myImageButton;
 
     @Override
+    // http://www.devcoons.com/android-bottom-navigation-menu-example-using-activities/
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //hide Action bar
+//        ActionBar actionBar = getSupportActionBar();
+//        actionBar.hide();
+
         BottomNavigationView navView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
@@ -29,46 +40,8 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(navView, navController);
 
-//        //when breakfast button clicked, open the breakfast activity
-//        myImageButton = findViewById(R.id.image_breakfast);
-//        myImageButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intentLoadActivity = new Intent (MainActivity.this, Breakfast.class);
-//                startActivity(intentLoadActivity);
-//            }
-//        });
-//
-//        //when the dinner button is clicked, open the dinner activity
-//        myImageButton = findViewById(R.id.image_dinner);
-//        myImageButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intentLoadActivity = new Intent (MainActivity.this, Dinner.class);
-//                startActivity(intentLoadActivity);
-//            }
-//        });
-//
-//        //when the dessert button is clicked, open the dessert activity
-//        myImageButton = findViewById(R.id.image_dessert);
-//        myImageButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intentLoadActivity = new Intent (MainActivity.this, Dessert.class);
-//                startActivity(intentLoadActivity);
-//            }
-//        });
-//
-//        myImageButton = findViewById((R.id.image_lunch));
-//
-//        myImageButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intentLoadActivity = new Intent (MainActivity.this, Lunch.class);
-//                startActivity(intentLoadActivity);
-//            }
-//        });
 
     }
+
 
 }

@@ -1,88 +1,58 @@
 package edu.calvin.cs262.hp46;
 
 import android.content.Context;
-import android.util.Log;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import com.google.gson.Gson;
+import com.mashape.unirest.http.HttpResponse;
+import com.mashape.unirest.http.JsonNode;
+import com.mashape.unirest.http.Unirest;
+import com.mashape.unirest.http.exceptions.UnirestException;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 
 public class NetworkUtils {
 
-    static String getRecipes(Context context, String queryString){
-        HttpURLConnection httpURLConnection = null;
-        BufferedReader bufferedReader = null;
-        String htmlRecipes = null;
-        // String[] protocol = context.getResources().getStringArray(R.array.http_array);
-
-        try{
-            /*
-            //Uri builder;
-                // https
-                Uri.Builder builder = new Uri.Builder();
-                //builder = Uri.parse(queryString).buildUpon()
-                         builder.scheme("https")
-                        .authority("spoonacular-recipe-food-nutrition-v1.p.rapidapi.com")
-                        .appendPath("/recipes/findByIngredients")
-                        .appendQueryParameter("fillIngredients","false")
-                        .appendQueryParameter("ingredients","tomato")
-                        .appendQueryParameter("limitLicense","false")
-                        .appendQueryParameter("number","5")
-                        .appendQueryParameter("ranking","1")
-                        .build();*/
-            //this just returns 2 random recipes, I'm keeping it low for now so we don't waste our uses
-            URL requestURL = new URL("https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/random?number=2");
-
-            //open up the connection
-            httpURLConnection = (HttpURLConnection) requestURL.openConnection();
-            httpURLConnection.setRequestMethod("GET");
-            httpURLConnection.setRequestProperty("x-rapidapi-host", "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com");
-            httpURLConnection.setRequestProperty("x-rapidapi-key", "157988faa0mshc85633e27821365p1fd0a4jsn0b0e96477e8f");
-            httpURLConnection.setRequestProperty("Content-Type", "application/json");
-            httpURLConnection.connect();
-            InputStream inputStream = httpURLConnection.getInputStream();
-
-
-            //convert InputStream type to String type
-            bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
-            StringBuilder stringBuilder = new StringBuilder();
-            String line;
-            while((line = bufferedReader.readLine())!= null){
-                stringBuilder.append(line);
-                // stringBuilder.append("\n");
+    static String getSourceCode(Context context, String queryString) throws UnirestException {
+        String chosenQueryType = "searchRecipe";
+        String queryRand = "gerRandomRecipe";
+        String querySearch = "searchRecipe";
+        int numRecipesReturned = 1;
+        try {
+            if (chosenQueryType.equals(queryRand)){    //if wanting a random number of recipes
+                return getRandomRecipe(numRecipesReturned).getJSONArray("recipes").getJSONObject(0).getString("title");
             }
-            if (stringBuilder.length() == 0){
+            if (chosenQueryType.equals(querySearch)){    //if searching for exact recipe
+                return searchRecipe(1, "pancakes ").getJSONArray("results").getJSONObject(0).getString("title");
+            }
+            else{
                 return null;
             }
-            htmlRecipes = stringBuilder.toString();
 
-
-            //convert to json
-            Gson gson = new Gson();
-            JsonElement element = gson.fromJson (htmlRecipes, JsonElement.class);
-            JsonObject jsonObject = element.getAsJsonObject();
-
-        }catch (IOException e){
+        } catch (UnirestException e) {
             e.printStackTrace();
+            return null;
+        } catch (JSONException e) {
+            e.printStackTrace();
+            return null;
         }
-        finally {
-            if (httpURLConnection != null){
-                httpURLConnection.disconnect();
-            }
-            if (bufferedReader != null){
-                try {
-                    bufferedReader.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
-        return htmlRecipes;
+    }
+
+    public static JSONObject getRandomRecipe(int numRecipes) throws UnirestException {
+        String numberString = String.valueOf(numRecipes);
+        HttpResponse<JsonNode> response;
+        response = Unirest.get("https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/random?number=" + numberString)
+                .header("X-RapidAPI-Host", "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com")
+                .header("X-RapidAPI-Key", "YOUR API KEY")
+                .asJson();
+        return response.getBody().getObject();
+    }
+
+    public static JSONObject searchRecipe(int numRecipes, String query) throws UnirestException {
+        String numberString = String.valueOf(numRecipes);
+        HttpResponse<JsonNode> response = Unirest.get("https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/search?number=" + numberString + "&query=" + query)
+                .header("x-rapidapi-host", "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com")
+                .header("x-rapidapi-key", "YOUR API KEY")
+                .asJson();
+        return response.getBody().getObject();
     }
 }
+

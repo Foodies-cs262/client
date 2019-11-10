@@ -5,6 +5,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.loader.content.AsyncTaskLoader;
 
+import com.mashape.unirest.http.exceptions.UnirestException;
+
 
 public class RecipesLoader extends AsyncTaskLoader<String> {
 
@@ -20,7 +22,12 @@ public class RecipesLoader extends AsyncTaskLoader<String> {
     @Nullable
     @Override
     public String loadInBackground() {
-        return NetworkUtils.getRecipes(mContext, mQueryString);
+        try {
+            return NetworkUtils.getSourceCode(mContext, mQueryString);
+        } catch (UnirestException e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 
     @Override
