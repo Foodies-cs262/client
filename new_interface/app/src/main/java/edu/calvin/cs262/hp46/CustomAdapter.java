@@ -1,3 +1,4 @@
+// ListAdapter from https://www.journaldev.com/10416/android-listview-with-custom-adapter-example-tutorial
 package edu.calvin.cs262.hp46;
 
 import android.content.Context;
@@ -7,7 +8,6 @@ import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ArrayAdapter;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -27,6 +27,8 @@ public class CustomAdapter extends ArrayAdapter<DataModel> implements View.OnCli
         ImageView childImg;
     }
 
+    // CustomAdapter constructor
+    // Contains array of DataModel object and context
     public CustomAdapter(ArrayList<DataModel> data, Context context) {
         super(context, R.layout.child_item, data);
         this.dataSet = data;
@@ -38,13 +40,14 @@ public class CustomAdapter extends ArrayAdapter<DataModel> implements View.OnCli
     public void onClick(View v) {
 
         int position=(Integer) v.getTag();
-        Object object= getItem(position);
-        DataModel dataModel=(DataModel)object;
+        DataModel object= getItem(position);
+        DataModel dataModel= object;
 
+        // Create Snackbar when + Button is pressed on the recipe list
         switch (v.getId())
         {
             case R.id.childButton:
-                Snackbar.make(v, "Ingredient for " + dataModel.getTitle()
+                Snackbar.make(v, "Ingredient for " + dataModel.getRecipe_name()
                         + " added to ingredient list", Snackbar.LENGTH_LONG)
                         .setAction("No action", null).show();
                 break;
@@ -67,9 +70,9 @@ public class CustomAdapter extends ArrayAdapter<DataModel> implements View.OnCli
             viewHolder = new ViewHolder();
             LayoutInflater inflater = LayoutInflater.from(getContext());
             convertView = inflater.inflate(R.layout.child_item, parent, false);
-            viewHolder.childTv = (TextView) convertView.findViewById(R.id.childTv);
-            viewHolder.childButton = (ImageView) convertView.findViewById(R.id.childButton);
-            viewHolder.childImg = (ImageView) convertView.findViewById(R.id.childImg);
+            viewHolder.childTv = convertView.findViewById(R.id.childTv);
+            viewHolder.childButton = convertView.findViewById(R.id.childButton);
+            viewHolder.childImg = convertView.findViewById(R.id.childImg);
 
             result=convertView;
 
@@ -79,13 +82,16 @@ public class CustomAdapter extends ArrayAdapter<DataModel> implements View.OnCli
             result=convertView;
         }
 
+        // Creates animation when scrolling up and down
+        // Calls animation from anim.down_from_up.xml and up_from_bottom.xml
         Animation animation = AnimationUtils.loadAnimation(mContext, (position > lastPosition) ? R.anim.up_from_bottom : R.anim.down_from_up);
         result.startAnimation(animation);
         lastPosition = position;
 
-        viewHolder.childTv.setText(dataModel.getTitle());
+        // Shows recipe name and recipe image on the ListView
+        // Prepares button for the onClick method
+        viewHolder.childTv.setText(dataModel.getRecipe_name());
         viewHolder.childImg.setImageResource(dataModel.getImage());
-//        viewHolder.txtVersion.setText(dataModel.getVersion_number());
         viewHolder.childButton.setOnClickListener(this);
         viewHolder.childButton.setTag(position);
         // Return the completed view to render on screen
