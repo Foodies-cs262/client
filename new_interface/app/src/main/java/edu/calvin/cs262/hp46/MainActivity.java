@@ -3,17 +3,23 @@ package edu.calvin.cs262.hp46;
 import android.os.Bundle;
 import android.widget.ImageButton;
 
+<<<<<<< HEAD
+=======
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.appcompat.app.ActionBar;
+>>>>>>> ca49d878b9a8c4abff31a178aedc0aace1e166bc
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+
 public class MainActivity extends AppCompatActivity {
 
+    public String FoodName;
     ImageButton myImageButton;
 
     @Override
@@ -38,5 +44,6 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
 
 }
