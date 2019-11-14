@@ -7,6 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2a30835c-b0be-45b2-ac21-9305ac0eeaf4" name="Default Changelist" comment="Merge branch 'master' of https://github.com/Foodies-cs262/client into britzema/test&#10;&#10;# Conflicts:&#10;#&#9;app/src/main/java/edu/calvin/cs262/hp46/MainActivity.java&#10;#&#9;app/src/main/java/edu/calvin/cs262/hp46/RecipesLoader.java&#10;#&#9;app/src/main/java/edu/calvin/cs262/hp46/SourceCodeLoader.java&#10;#&#9;new_interface/app/build.gradle&#10;#&#9;new_interface/app/src/main/java/edu/calvin/cs262/hp46/SourceCodeLoader.java">
+      <change afterPath="$PROJECT_DIR$" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../.gradle/5.4.1/executionHistory/executionHistory.bin" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../.gradle/5.4.1/executionHistory/executionHistory.lock" beforeDir="false" />
@@ -26,16 +27,17 @@
       <change beforePath="$PROJECT_DIR$/../.idea/caches/build_file_checksums.ser" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/caches/gradle_models.ser" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/codeStyles/Project.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/dictionaries/spqr9.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/gradle.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/libraries/Gradle__androidx_annotation_annotation_1_0_0_jar.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/libraries/Gradle__androidx_appcompat_appcompat_1_0_2_aar.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/libraries/Gradle__androidx_arch_core_core_common_2_0_0_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Gradle__androidx_arch_core_core_runtime_2_0_0_aar.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/libraries/Gradle__androidx_asynclayoutinflater_asynclayoutinflater_1_0_0_aar.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/libraries/Gradle__androidx_collection_collection_1_0_0_jar.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/libraries/Gradle__androidx_constraintlayout_constraintlayout_1_1_3_aar.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/libraries/Gradle__androidx_constraintlayout_constraintlayout_solver_1_1_3_jar.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/libraries/Gradle__androidx_coordinatorlayout_coordinatorlayout_1_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Gradle__androidx_core_core_1_0_1_aar.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/libraries/Gradle__androidx_cursoradapter_cursoradapter_1_0_0_aar.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/libraries/Gradle__androidx_customview_customview_1_0_0_aar.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/libraries/Gradle__androidx_documentfile_documentfile_1_0_0_aar.xml" beforeDir="false" />
@@ -45,6 +47,10 @@
       <change beforePath="$PROJECT_DIR$/../.idea/libraries/Gradle__androidx_legacy_legacy_support_core_ui_1_0_0_aar.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/libraries/Gradle__androidx_legacy_legacy_support_core_utils_1_0_0_aar.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/libraries/Gradle__androidx_lifecycle_lifecycle_common_2_0_0_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_2_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_core_2_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Gradle__androidx_lifecycle_lifecycle_runtime_2_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Gradle__androidx_lifecycle_lifecycle_viewmodel_2_0_0_aar.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/libraries/Gradle__androidx_loader_loader_1_0_0_aar.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/libraries/Gradle__androidx_localbroadcastmanager_localbroadcastmanager_1_0_0_aar.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/libraries/Gradle__androidx_print_print_1_0_0_aar.xml" beforeDir="false" />
@@ -54,7 +60,9 @@
       <change beforePath="$PROJECT_DIR$/../.idea/libraries/Gradle__androidx_test_espresso_espresso_idling_resource_3_1_1_aar.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/libraries/Gradle__androidx_test_monitor_1_1_1_aar.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/libraries/Gradle__androidx_test_runner_1_1_1_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Gradle__androidx_vectordrawable_vectordrawable_1_0_1_aar.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/libraries/Gradle__androidx_vectordrawable_vectordrawable_animated_1_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Gradle__androidx_versionedparcelable_versionedparcelable_1_0_0_aar.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/libraries/Gradle__androidx_viewpager_viewpager_1_0_0_aar.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/libraries/Gradle__com_google_code_findbugs_jsr305_2_0_1_jar.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/libraries/Gradle__com_squareup_javawriter_2_1_1_jar.xml" beforeDir="false" />
@@ -82,17 +90,8 @@
       <change beforePath="$PROJECT_DIR$/../SupplementalSpecifications.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../UI_Model_Picture.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../app/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/.idea/.name" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../app/.idea/codeStyles/Project.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../app/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/.idea/libraries/Gradle__androidx_arch_core_core_runtime_2_1_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/.idea/libraries/Gradle__androidx_core_core_1_1_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_2_1_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_core_2_1_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_runtime_2_1_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_viewmodel_2_1_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/.idea/libraries/Gradle__androidx_vectordrawable_vectordrawable_1_1_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/.idea/libraries/Gradle__androidx_versionedparcelable_versionedparcelable_1_1_0_aar.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../app/.idea/misc.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../app/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../app/.idea/runConfigurations.xml" beforeDir="false" />
@@ -107,7 +106,6 @@
       <change beforePath="$PROJECT_DIR$/../app/local.properties" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../app/proguard-rules.pro" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../app/src/androidTest/java/edu/calvin/cs262/cheferone/ExampleInstrumentedTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/androidTest/java/edu/calvin/cs262/hp46/ExampleInstrumentedTest.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../app/src/main/AndroidManifest.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../app/src/main/java/edu/calvin/cs262/cheferone/Breakfast.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../app/src/main/java/edu/calvin/cs262/cheferone/ChildDataModel.java" beforeDir="false" />
@@ -119,63 +117,17 @@
       <change beforePath="$PROJECT_DIR$/../app/src/main/java/edu/calvin/cs262/cheferone/Pancake.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../app/src/main/java/edu/calvin/cs262/cheferone/menu_activity.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../app/src/main/java/edu/calvin/cs262/cheferone/shoppingList.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/edu/calvin/cs262/hp46/CustomAdapter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/edu/calvin/cs262/hp46/Food.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/edu/calvin/cs262/hp46/Food_Ingredient.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/edu/calvin/cs262/hp46/Ingredient.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/edu/calvin/cs262/hp46/IngredientTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/edu/calvin/cs262/hp46/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/edu/calvin/cs262/hp46/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/edu/calvin/cs262/hp46/NetworkUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/edu/calvin/cs262/hp46/RecipesLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/edu/calvin/cs262/hp46/RecipesLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/edu/calvin/cs262/hp46/SharedViewModel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/edu/calvin/cs262/hp46/SourceCodeLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/edu/calvin/cs262/hp46/SourceCodeLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/edu/calvin/cs262/hp46/Splashscreen.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/edu/calvin/cs262/hp46/ui/home/HomeFragment.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/edu/calvin/cs262/hp46/ui/home/HomeViewModel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/edu/calvin/cs262/hp46/ui/planner/CategoriesFragment.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/edu/calvin/cs262/hp46/ui/planner/CategoriesViewModel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/edu/calvin/cs262/hp46/ui/search/SearchFragment.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/edu/calvin/cs262/hp46/ui/search/SearchViewModel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/edu/calvin/cs262/hp46/ui/shoppinglist/ShoppinglistFragment.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/edu/calvin/cs262/hp46/ui/shoppinglist/ShoppinglistViewModel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/anim/down_from_up.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/anim/up_from_bottom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-anydpi-v24/image_needed.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-anydpi/arrow_down.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-anydpi/arrow_right.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-anydpi/ic_planner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-anydpi/ic_search.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-anydpi/ic_shopping_list.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-anydpi/ic_weekly_planner.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-hdpi/arrow_down.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-hdpi/arrow_right.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-hdpi/ic_planner.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-hdpi/ic_search.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-hdpi/ic_shopping_list.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-hdpi/ic_weekly_planner.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-hdpi/image_needed.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-mdpi/arrow_down.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-mdpi/arrow_right.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-mdpi/ic_planner.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-mdpi/ic_search.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-mdpi/ic_shopping_list.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-mdpi/ic_weekly_planner.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-mdpi/image_needed.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-v24/ic_launcher_foreground.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xhdpi/arrow_down.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xhdpi/arrow_right.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xhdpi/ic_planner.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xhdpi/ic_search.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xhdpi/ic_shopping_list.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xhdpi/ic_weekly_planner.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xhdpi/image_needed.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xxhdpi/arrow_down.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xxhdpi/arrow_right.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xxhdpi/ic_planner.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xxhdpi/ic_search.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xxhdpi/ic_shopping_list.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xxhdpi/ic_weekly_planner.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xxhdpi/image_needed.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable/breakfast.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable/breakfast_icon.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable/cinnamon_french_toast.jpg" beforeDir="false" />
@@ -185,24 +137,12 @@
       <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable/dinner_icon.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable/eggs_bacon.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable/fluffypancakes.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable/hungry.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable/ic_dashboard_black_24dp.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable/ic_home_black_24dp.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable/ic_launcher_background.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable/ic_notifications_black_24dp.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable/icon.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable/lunch.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable/lunch_icon.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable/pancakes.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable/plannar_top.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable/planner_icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable/plus.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable/searchicon.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable/settings_selector.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable/shopping_image.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable/splash_screen.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable/thanksgivingdinnergetty.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable/toolbar_color.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../app/src/main/res/font/candal.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../app/src/main/res/layout/activity_breakfast.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../app/src/main/res/layout/activity_dessert.xml" beforeDir="false" />
@@ -211,17 +151,9 @@
       <change beforePath="$PROJECT_DIR$/../app/src/main/res/layout/activity_main.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../app/src/main/res/layout/activity_menu_activity.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../app/src/main/res/layout/activity_shopping_list.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/layout/activity_splashscreen.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../app/src/main/res/layout/child_item.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/layout/content_main.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/layout/fragment_categories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/layout/fragment_home.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/layout/fragment_search.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/layout/fragment_shoppinglist.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../app/src/main/res/layout/list_header.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../app/src/main/res/layout/pancake_recipe.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/menu/bottom_nav_menu.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/menu/menu_main.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../app/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
@@ -234,68 +166,20 @@
       <change beforePath="$PROJECT_DIR$/../app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/navigation/mobile_navigation.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../app/src/main/res/values/colors.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/values/dimens.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../app/src/main/res/values/font_certs.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../app/src/main/res/values/preloaded_fonts.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../app/src/main/res/values/strings.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../app/src/main/res/values/styles.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../app/src/test/java/edu/calvin/cs262/cheferone/ExampleUnitTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/test/java/edu/calvin/cs262/hp46/ExampleUnitTest.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../build.gradle" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_appcompat_appcompat_1_0_2_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_appcompat_appcompat_1_0_2_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_asynclayoutinflater_asynclayoutinflater_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_asynclayoutinflater_asynclayoutinflater_1_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_constraintlayout_constraintlayout_1_1_3_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_constraintlayout_constraintlayout_1_1_3_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_constraintlayout_constraintlayout_solver_1_1_3_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_constraintlayout_constraintlayout_solver_1_1_3_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_coordinatorlayout_coordinatorlayout_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_coordinatorlayout_coordinatorlayout_1_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_cursoradapter_cursoradapter_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_cursoradapter_cursoradapter_1_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_customview_customview_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_customview_customview_1_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_documentfile_documentfile_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_documentfile_documentfile_1_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_drawerlayout_drawerlayout_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_drawerlayout_drawerlayout_1_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_fragment_fragment_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_fragment_fragment_1_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_interpolator_interpolator_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_interpolator_interpolator_1_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_legacy_legacy_support_core_ui_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_legacy_legacy_support_core_ui_1_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_legacy_legacy_support_core_utils_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_legacy_legacy_support_core_utils_1_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_loader_loader_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_loader_loader_1_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_localbroadcastmanager_localbroadcastmanager_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_localbroadcastmanager_localbroadcastmanager_1_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_print_print_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_print_print_1_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_slidingpanelayout_slidingpanelayout_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_slidingpanelayout_slidingpanelayout_1_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_swiperefreshlayout_swiperefreshlayout_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_swiperefreshlayout_swiperefreshlayout_1_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_test_espresso_espresso_core_3_1_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_test_espresso_espresso_core_3_1_1_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_test_espresso_espresso_idling_resource_3_1_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_test_espresso_espresso_idling_resource_3_1_1_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_test_monitor_1_1_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_test_monitor_1_1_1_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_test_runner_1_1_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_test_runner_1_1_1_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_vectordrawable_vectordrawable_animated_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_vectordrawable_vectordrawable_animated_1_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_viewpager_viewpager_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_viewpager_viewpager_1_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_code_findbugs_jsr305_2_0_1_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_code_findbugs_jsr305_2_0_1_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_javawriter_2_1_1_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_javawriter_2_1_1_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__javax_inject_javax_inject_1_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__javax_inject_javax_inject_1_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__junit_junit_4_12_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__junit_junit_4_12_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__net_sf_kxml_kxml2_2_3_0_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__net_sf_kxml_kxml2_2_3_0_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_integration_1_3_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_integration_1_3_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_library_1_3_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_library_1_3_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cheferone.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Cheferone.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/edu/calvin/cs262/hp46/NetworkUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/edu/calvin/cs262/hp46/NetworkUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/edu/calvin/cs262/hp46/SourceCodeLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/edu/calvin/cs262/hp46/FoodLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/edu/calvin/cs262/hp46/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/edu/calvin/cs262/hp46/MainActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../gradle.properties" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
@@ -307,28 +191,74 @@
       <change beforePath="$PROJECT_DIR$/../lab8/lab08/query.sql" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../local.properties" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../new_interface/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../new_interface/.idea/.name" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../new_interface/.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../new_interface/.idea/dictionaries/spqr9.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../new_interface/.idea/gradle.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../new_interface/.idea/misc.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../new_interface/.idea/render.experimental.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../new_interface/.idea/runConfigurations.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../new_interface/.idea/vcs.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../new_interface/app/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../new_interface/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../new_interface/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../new_interface/app/build.gradle" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../new_interface/app/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../new_interface/app/src/androidTest/java/edu/calvin/cs262/hp46/ExampleInstrumentedTest.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/AndroidManifest.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/java/edu/calvin/cs262/hp46/Breakfast.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/java/edu/calvin/cs262/hp46/CustomAdapter.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/java/edu/calvin/cs262/hp46/DataModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/java/edu/calvin/cs262/hp46/Food.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/java/edu/calvin/cs262/hp46/Food_Ingredient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/java/edu/calvin/cs262/hp46/Ingredient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/java/edu/calvin/cs262/hp46/IngredientTable.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/java/edu/calvin/cs262/hp46/Lunch.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/java/edu/calvin/cs262/hp46/MainActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/java/edu/calvin/cs262/hp46/NetworkUtils.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/java/edu/calvin/cs262/hp46/RecipesLoader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/java/edu/calvin/cs262/hp46/SharedViewModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/java/edu/calvin/cs262/hp46/Splashscreen.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/java/edu/calvin/cs262/hp46/ui/home/HomeFragment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/java/edu/calvin/cs262/hp46/ui/home/HomeViewModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/java/edu/calvin/cs262/hp46/ui/planner/CategoriesFragment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/java/edu/calvin/cs262/hp46/ui/planner/CategoriesViewModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/java/edu/calvin/cs262/hp46/ui/search/SearchFragment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/java/edu/calvin/cs262/hp46/ui/search/SearchViewModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/java/edu/calvin/cs262/hp46/ui/shoppinglist/ShoppinglistFragment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/java/edu/calvin/cs262/hp46/ui/shoppinglist/ShoppinglistViewModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/res/anim/down_from_up.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/res/anim/up_from_bottom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/res/drawable-anydpi-v24/image_needed.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/res/drawable-anydpi/arrow_down.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/res/drawable-anydpi/arrow_right.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/res/drawable-anydpi/ic_planner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/res/drawable-anydpi/ic_search.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/res/drawable-anydpi/ic_shopping_list.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/res/drawable-anydpi/ic_weekly_planner.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/res/drawable-hdpi/arrow_down.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/res/drawable-hdpi/arrow_right.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/res/drawable-hdpi/ic_planner.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/res/drawable-hdpi/ic_search.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/res/drawable-hdpi/ic_shopping_list.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/res/drawable-hdpi/ic_weekly_planner.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/res/drawable-hdpi/image_needed.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/res/drawable-mdpi/arrow_down.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/res/drawable-mdpi/arrow_right.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/res/drawable-mdpi/ic_planner.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/res/drawable-mdpi/ic_search.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/res/drawable-mdpi/ic_shopping_list.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/res/drawable-mdpi/ic_weekly_planner.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/res/drawable-mdpi/image_needed.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/res/drawable-xhdpi/ic_planner.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/res/drawable-xhdpi/ic_search.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/res/drawable-xhdpi/ic_shopping_list.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/res/drawable-xhdpi/ic_weekly_planner.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/res/drawable-xhdpi/image_needed.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/res/drawable-xxhdpi/ic_planner.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/res/drawable-xxhdpi/ic_search.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/res/drawable-xxhdpi/ic_shopping_list.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/res/drawable-xxhdpi/ic_weekly_planner.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/res/drawable-xxhdpi/image_needed.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/res/drawable/breakfast_icon.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/res/drawable/cinnamon_french_toast.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/res/drawable/desert.jpeg" beforeDir="false" />
@@ -337,17 +267,37 @@
       <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/res/drawable/dinner_icon.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/res/drawable/eggs_bacon.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/res/drawable/fluffypancakes.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/res/drawable/hungry.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/res/drawable/ic_dashboard_black_24dp.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/res/drawable/ic_home_black_24dp.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/res/drawable/ic_launcher_background.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/res/drawable/ic_notifications_black_24dp.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/res/drawable/icon.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/res/drawable/lunch.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/res/drawable/lunch_icon.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/res/drawable/pancakes.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/res/drawable/plannar_top.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/res/drawable/planner_icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/res/drawable/plus.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/res/drawable/searchicon.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/res/drawable/settings_selector.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/res/drawable/shopping_image.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/res/drawable/splash_screen.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/res/drawable/thanksgivingdinnergetty.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/res/drawable/toolbar_color.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/res/layout/activity_breakfast.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/res/layout/activity_lunch.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/res/layout/activity_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/res/layout/activity_splashscreen.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/res/layout/child_item.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/res/layout/content_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/res/layout/fragment_categories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/res/layout/fragment_home.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/res/layout/fragment_search.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/res/layout/fragment_shoppinglist.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/res/layout/list_header.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/res/menu/bottom_nav_menu.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/res/menu/menu_main.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
@@ -360,18 +310,21 @@
       <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/res/navigation/mobile_navigation.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/res/values/colors.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/res/values/dimens.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/res/values/strings.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../new_interface/app/src/main/res/values/styles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../new_interface/app/src/test/java/edu/calvin/cs262/hp46/ExampleUnitTest.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../new_interface/build.gradle" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../new_interface/gradle.properties" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../new_interface/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../new_interface/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../new_interface/gradlew" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../new_interface/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../new_interface/settings.gradle" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../postgresql/database_schema.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../postgresql/database_sql1.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../settings.gradle" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/build/classes/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -396,20 +349,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/calvin/cs262/hp46/NetworkUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="185">
-              <caret line="51" column="5" lean-forward="true" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/calvin/cs262/hp46/FoodLoader.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="151">
+              <caret line="49" column="26" selection-end-line="73" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -418,10 +359,37 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/calvin/cs262/hp46/FoodLoader.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" selection-end-line="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/build.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/calvin/cs262/hp46/MainActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="40" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/calvin/cs262/hp46/FoodDetails.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="2567">
-              <caret line="151" column="1" selection-start-line="151" selection-start-column="1" selection-end-line="151" selection-end-column="1" />
+              <caret line="151" column="1" selection-end-line="151" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -446,7 +414,6 @@
       <list>
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_shoppinglist.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/edu/calvin/cs262/hp46/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_categories.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/edu/calvin/cs262/hp46/Ingredient.java" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
@@ -459,6 +426,7 @@
         <option value="$PROJECT_DIR$/app/src/main/java/edu/calvin/cs262/hp46/SourceCodeLoader.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/edu/calvin/cs262/hp46/FoodLoader.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/edu/calvin/cs262/hp46/NetworkUtils.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/edu/calvin/cs262/hp46/MainActivity.java" />
       </list>
     </option>
   </component>
@@ -696,16 +664,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/calvin/cs262/hp46/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/list_header.xml" />
     <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/calvin/cs262/hp46/CustomAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -818,8 +776,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="20" column="48" selection-start-line="20" selection-start-column="48" selection-end-line="20" selection-end-column="48" />
+        <state relative-caret-position="119">
+          <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -837,7 +795,7 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/calvin/cs262/hp46/FoodDetails.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2567">
-          <caret line="151" column="1" selection-start-line="151" selection-start-column="1" selection-end-line="151" selection-end-column="1" />
+          <caret line="151" column="1" selection-end-line="151" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -846,8 +804,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/calvin/cs262/hp46/NetworkUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="51" column="5" lean-forward="true" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
+        <state relative-caret-position="151">
+          <caret line="49" column="26" selection-end-line="73" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -856,11 +814,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/calvin/cs262/hp46/FoodLoader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="136">
+          <caret line="8" selection-end-line="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/calvin/cs262/hp46/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="40" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
         </state>
       </provider>
     </entry>

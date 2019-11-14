@@ -6,10 +6,6 @@ import android.widget.ImageButton;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.appcompat.app.ActionBar;
-<<<<<<< HEAD:new_interface/app/src/main/java/edu/calvin/cs262/hp46/MainActivity.java
-
-=======
->>>>>>> b8e622e4a8cf050235deca57e6f7a39ccb57629d:app/src/main/java/edu/calvin/cs262/hp46/MainActivity.java
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
