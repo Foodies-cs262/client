@@ -1,78 +1,73 @@
 package edu.calvin.cs262.hp46;
 
-import android.content.Context;
-import android.net.Uri;
-import android.util.Log;
-
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.URL;
+import com.mashape.unirest.http.HttpResponse;
+import com.mashape.unirest.http.JsonNode;
+import com.mashape.unirest.http.Unirest;
+import com.mashape.unirest.http.exceptions.UnirestException;
+import org.json.JSONObject;
 
 
 public class NetworkUtils {
-    // network class
-    private static final String LOG_TAG = NetworkUtils.class.getSimpleName();
-    private static final String HTTP = "http";
-    private static final String HTTPS = "https";
 
-    static String getSourceCode(Context context, String queryString, String transferProtocol){
-        HttpURLConnection httpURLConnection = null;
-        BufferedReader bufferedReader = null;
-        String htmlSourceCode = null;
-        String[] protocol = context.getResources().getStringArray(R.array.array);
-        try{
-            Uri builder;
-            if (transferProtocol.equals(protocol[0])){
-                // http
-                builder = Uri.parse(queryString).buildUpon()
-                        .scheme(HTTP)
-                        .build();
+    /*getSourceCode() handles which function to choose based off of query types
+    * Valid query types are getRandomRecipe, searchRecipe, and getRecipeInfo
+    * If query type is getRecipeInfo, int i serves as the id. If one of the other two query types,
+    *     int i is the number of recipes you want returned.
+    * What the content of String request is only matters if queryType equals searchRecipe.
+    *     Example for searchRecipe request: "steak". Example for other 2: "" - does not matter
+    */
+    static JSONObject getFood(String queryType, int i, String request) throws UnirestException {
+        try {
+            if (queryType.equals("getRandomRecipe")) {    //if wanting a random number of recipes
+                return getRandomRecipe(i);
+                    //example of how one would access the contents of the recipe ingredients. See Spoonacular api for further documentation
+                // return getRandomRecipe(numRecipesReturned).getJSONArray("recipes").getJSONObject(0).getJSONArray("extendedIngredients").getJSONObject(0).getString("name");
             }
-            else{
-                // https
-                builder = Uri.parse(queryString).buildUpon()
-                        .scheme(HTTPS)
-                        .build();
+            if (queryType.equals("searchRecipe")) {    //if searching for exact recipe
+                return searchRecipe(i, request);
             }
-
-            URL requestURL = new URL(builder.toString());
-            // httpURLConnection automatically goes for http or https based on the URI scheme
-            httpURLConnection = (HttpURLConnection) requestURL.openConnection();
-            httpURLConnection.setRequestMethod("GET");
-            httpURLConnection.connect();
-            InputStream inputStream = httpURLConnection.getInputStream();
-            bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
-            StringBuilder stringBuilder = new StringBuilder();
-            String line;
-            while((line = bufferedReader.readLine())!= null){
-                stringBuilder.append(line);
-                stringBuilder.append("\n");
-            }
-            if (stringBuilder.length() == 0){
+            if (queryType.equals("getRecipeInfo")) {    //getting more recipe info, needed for searchRecipe
+                return getRecipeInfo(i);
+                     //example of how one would access the contents of the recipe ingredients. See Spoonacular api for further documentation
+                // return getRecipeInfo(479101).getJSONArray("extendedIngredients").getJSONObject(0).getString("name");
+            } else {
                 return null;
             }
-            htmlSourceCode = stringBuilder.toString();
 
-        }catch (IOException e){
+        } catch (UnirestException e) {
             e.printStackTrace();
+            return null;
         }
-        finally {
-            if (httpURLConnection != null){
-                httpURLConnection.disconnect();
-            }
-            if (bufferedReader != null){
-                try {
-                    bufferedReader.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
-        Log.d(LOG_TAG, htmlSourceCode);
-        return htmlSourceCode;
+    }
+
+    //returns a json object of numRecipes recipes
+    public static JSONObject getRandomRecipe(int numRecipes) throws UnirestException {
+        String numberString = String.valueOf(numRecipes);
+        HttpResponse<JsonNode> response;
+        response = Unirest.get("https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/random?number=" + numberString)
+                .header("X-RapidAPI-Host", "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com")
+                .header("X-RapidAPI-Key", "YOUR OWN RAPID API SPOONACULAR KEY")
+                .asJson();
+        return response.getBody().getObject();
+    }
+
+    //returns json object of numRecipes recipes related to the query entered
+    public static JSONObject searchRecipe(int numRecipes, String query) throws UnirestException {
+        String numberString = String.valueOf(numRecipes);
+        HttpResponse<JsonNode> response = Unirest.get("https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/search?number=" + numberString + "&query=" + query)
+                .header("x-rapidapi-host", "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com")
+                .header("x-rapidapi-key", "YOUR OWN RAPID API SPOONACULAR KEY")
+                .asJson();
+        return response.getBody().getObject();
+    }
+
+    //returns a json object of one recipe correlated to the id entered
+    public static JSONObject getRecipeInfo(int id) throws UnirestException {
+        HttpResponse<JsonNode> response = Unirest.get("https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/" + id + "/information")
+                .header("x-rapidapi-host", "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com")
+                .header("x-rapidapi-key", "YOUR OWN RAPID API SPOONACULAR KEY")
+                .asJson();
+        return response.getBody().getObject();
     }
 }
 
