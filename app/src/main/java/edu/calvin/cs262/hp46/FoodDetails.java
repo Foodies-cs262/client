@@ -148,5 +148,4 @@ public class FoodDetails {
             return null;
         }
     }
-
 }

@@ -5,7 +5,7 @@ public class Ingredient {
     private Long ingriAmount;
     private String ingriUnit;
 
-    public Ingredient(String ingriName, Long ingriAmount, String ingriUnit){
+    public Ingredient(String ingriName, Long ingriAmount, String ingriUnit) {
         this.setAmount(ingriAmount);
         this.setName(ingriName);
         this.setUnit(ingriUnit);

@@ -6,7 +6,7 @@ import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
 @Entity(tableName = "Food_table")
-public class Food{
+public class Food {
 
     @PrimaryKey
     @NonNull
@@ -23,5 +23,4 @@ public class Food{
 
     public int getID(){return this.foodID;}
     public  String getName(){return  this.name;}
-
 }

@@ -44,8 +44,7 @@ public class CustomAdapter extends ArrayAdapter<DataModel> implements View.OnCli
         DataModel dataModel= object;
 
         // Create Snackbar when + Button is pressed on the recipe list
-        switch (v.getId())
-        {
+        switch (v.getId()) {
             case R.id.childButton:
                 Snackbar.make(v, "Ingredient for " + dataModel.getRecipe_name()
                         + " added to ingredient list", Snackbar.LENGTH_LONG)

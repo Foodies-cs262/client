@@ -16,15 +16,11 @@ public class Splashscreen extends AppCompatActivity {
         Thread thread = new Thread(){
             @Override
             public void run(){
-                try{
+                try {
                     sleep(2000);
-                }
-                catch (Exception e)
-                {
+                } catch (Exception e) {
                     e.printStackTrace();
-                }
-                finally
-                {
+                } finally {
                     Intent mainIntent = new Intent(Splashscreen.this,MainActivity.class);
                     startActivity(mainIntent);
                 }
@@ -34,10 +30,8 @@ public class Splashscreen extends AppCompatActivity {
     }
 
     @Override
-    protected void onPause()
-    {
+    protected void onPause() {
         super.onPause();
         finish();
-
     }
 }

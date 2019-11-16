@@ -9,7 +9,7 @@ import org.json.JSONObject;
 
 public class NetworkUtils {
 
-    /*getSourceCode() handles which function to choose based off of query types
+    /**getSourceCode() handles which function to choose based off of query types
     * Valid query types are getRandomRecipe, searchRecipe, and getRecipeInfo
     * If query type is getRecipeInfo, int i serves as the id. If one of the other two query types,
     *     int i is the number of recipes you want returned.
@@ -20,15 +20,13 @@ public class NetworkUtils {
         try {
             if (queryType.equals("getRandomRecipe")) {    //if wanting a random number of recipes
                 return getRandomRecipe(i);
-                    //example of how one would access the contents of the recipe ingredients. See Spoonacular api for further documentation
-                // return getRandomRecipe(numRecipesReturned).getJSONArray("recipes").getJSONObject(0).getJSONArray("extendedIngredients").getJSONObject(0).getString("name");
-            }
-            if (queryType.equals("searchRecipe")) {    //if searching for exact recipe
+                //example of how one would access the contents of the recipe ingredients. See Spoonacular api for further documentation
+                //return getRandomRecipe(numRecipesReturned).getJSONArray("recipes").getJSONObject(0).getJSONArray("extendedIngredients").getJSONObject(0).getString("name");
+            } if (queryType.equals("searchRecipe")) {    //if searching for exact recipe
                 return searchRecipe(i, request);
-            }
-            if (queryType.equals("getRecipeInfo")) {    //getting more recipe info, needed for searchRecipe
+            } if (queryType.equals("getRecipeInfo")) {    //getting more recipe info, needed for searchRecipe
                 return getRecipeInfo(i);
-                     //example of how one would access the contents of the recipe ingredients. See Spoonacular api for further documentation
+                //example of how one would access the contents of the recipe ingredients. See Spoonacular api for further documentation
                 // return getRecipeInfo(479101).getJSONArray("extendedIngredients").getJSONObject(0).getString("name");
             } else {
                 return null;

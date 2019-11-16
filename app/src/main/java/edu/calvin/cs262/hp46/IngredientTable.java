@@ -21,7 +21,12 @@ public class IngredientTable {
         this.name = inputName;
     }
 
-    public int getID(){return this.IngredientID;}
-    public  String getName(){return  this.name;}
+    public int getID() {
+        return this.IngredientID;
+    }
+
+    public String getName() {
+        return  this.name;
+    }
 
 }
