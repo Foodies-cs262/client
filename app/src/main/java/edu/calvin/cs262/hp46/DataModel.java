@@ -1,3 +1,5 @@
+// Class for instantiating the Recipe-data containing object
+
 package edu.calvin.cs262.hp46;
 
 import java.util.ArrayList;
@@ -26,6 +28,7 @@ public class DataModel {
     public int getImage() {
         return image;
     }
+
     public void setImage(int image) {
         this.image = image;
     }
@@ -34,6 +37,7 @@ public class DataModel {
     public long getId() {
         return id;
     }
+
     public void setId(int id) {
         this.id = id;
     }
@@ -42,6 +46,7 @@ public class DataModel {
     public String getRecipe_name() {
         return recipe_name;
     }
+
     public void setRecipe_name(String recipe_name) {
         this.recipe_name = recipe_name;
     }
@@ -50,6 +55,7 @@ public class DataModel {
     public String getUrl() {
         return url;
     }
+
     public void setUrl(String url) {
         this.url = url;
     }
@@ -58,6 +64,7 @@ public class DataModel {
     public List<Ingredient> getIngredient() {
         return new ArrayList<>(ingredient);
     }
+
     public void setIngredient(List<Ingredient> ingredient) {
         this.ingredient = ingredient;
     }

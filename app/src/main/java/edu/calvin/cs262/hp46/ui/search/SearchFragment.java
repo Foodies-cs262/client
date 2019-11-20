@@ -13,7 +13,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
-import edu.calvin.cs262.hp46.Lunch;
+import edu.calvin.cs262.hp46.SearchedRecipe;
 import edu.calvin.cs262.hp46.R;
 import edu.calvin.cs262.hp46.SharedViewModel;
 
@@ -38,7 +38,7 @@ public class SearchFragment extends Fragment {
                 myView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent intentLoadActivity = new Intent (getActivity(), Lunch.class);
+                    Intent intentLoadActivity = new Intent (getActivity(), SearchedRecipe.class);
                     startActivity(intentLoadActivity);
                     model.select("hi");
 

@@ -12,7 +12,7 @@
         android:roundIcon="@drawable/icon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Lunch"></activity>
+        <activity android:name=".SearchedRecipe"></activity>
         <activity android:name=".MainActivity"></activity>
         <activity android:name=".Splashscreen" android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
