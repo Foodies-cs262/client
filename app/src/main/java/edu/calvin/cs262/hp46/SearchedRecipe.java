@@ -58,6 +58,7 @@ public class SearchedRecipe extends AppCompatActivity implements CustomAdapter.C
             }
         });
 
+
         /*******************************************************************/
         //start loader, loader won't start using getLoader()
         getSupportLoaderManager().initLoader(0, null, this);  //deprecated but still works
@@ -71,18 +72,29 @@ public class SearchedRecipe extends AppCompatActivity implements CustomAdapter.C
     public Loader<JSONObject> onCreateLoader(int i, @Nullable Bundle bundle) {
         //TODO: for the search functionality, you are going to want to use types, take advantage of the Bundle type
         //TODO: Verify if there is wifi, nice error handling
-        return new FoodLoader(this, "getRandomRecipe", 1, "");
+        return new FoodLoader(this, "getRecipeInfo", 211419, "");
     }
 
     @Override
     public void onLoadFinished(@NonNull Loader<JSONObject> loader, JSONObject j) {
-        try {
+        /*try {
             //testing if communicating properly with API
-            Log.d("here", FoodDetails.getTitleRand(j,0));
+            Log.d("here", FoodDetails.getTitleInfo(j));
+            //testing if getting correct number of ingredients
+            Log.d("here2",Integer.toString(   IngredientDetails.getNumIngredients( FoodDetails.getIngredientsInfo(j) )  )  );
+            //testing if getting proper id of 1st ingredient
+            Log.d ("here3", Integer.toString( IngredientDetails.getIngredientID( FoodDetails.getIngredientsInfo(j), 0 )) );
+            //testing if getting proper name of 1st ingredient
+            Log.d ("here4", IngredientDetails.getIngredientName( FoodDetails.getIngredientsInfo(j), 0 ));
+            //testing if getting proper amount for first ingredient
+            Log.d("here5",Integer.toString(   IngredientDetails.getIngredientAmount( FoodDetails.getIngredientsInfo(j), 0 )  )  );
+            //testing if getting proper unit for first ingredient
+            Log.d ("here6", IngredientDetails.getIngredientUnit( FoodDetails.getIngredientsInfo(j), 0 ));
+
         }
         catch (Exception e) {
             e.printStackTrace();
-        }
+        }*/
 
     }
 

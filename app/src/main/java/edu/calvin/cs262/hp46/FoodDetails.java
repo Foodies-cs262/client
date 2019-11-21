@@ -11,12 +11,12 @@ public class FoodDetails {
      ***********************************************************************************************************************/
 
     //get recipe id, this is used if operating on an object returned from the getRandomRecipe() function
-    public static String getIDRand(JSONObject foodObject, int index) {
+    public static int getIDRand(JSONObject foodObject, int index) {
         try {
-            return foodObject.getJSONArray("recipes").getJSONObject(index).getString("id");
+            return foodObject.getJSONArray("recipes").getJSONObject(index).getInt("id");
         } catch (JSONException e) {
             e.printStackTrace();
-            return null;
+            return 0;
         }
     }
 
@@ -65,12 +65,12 @@ public class FoodDetails {
      ***********************************************************************************************************************/
 
     //get recipe id, this is used if operating on an object returned from the searchRecipe() function
-    public static String getIDSearch(JSONObject foodObject, int index) {
+    public static int getIDSearch(JSONObject foodObject, int index) {
         try {
-            return foodObject.getJSONArray("results").getJSONObject(index).getString("id");
+            return foodObject.getJSONArray("results").getJSONObject(index).getInt("id");
         } catch (JSONException e) {
             e.printStackTrace();
-            return null;
+            return 0;
         }
     }
 
@@ -100,12 +100,12 @@ public class FoodDetails {
      ***********************************************************************************************************************/
 
     //get recipe id, this is used if operating on an object returned from the getRecipeInfo() function
-    public static String getIDInfo(JSONObject foodObject) {
+    public static int getIDInfo(JSONObject foodObject) {
         try {
-            return foodObject.getString("id");
+            return foodObject.getInt("id");
         } catch (JSONException e) {
             e.printStackTrace();
-            return null;
+            return 0;
         }
     }
 
