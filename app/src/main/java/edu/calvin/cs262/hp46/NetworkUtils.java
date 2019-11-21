@@ -1,5 +1,7 @@
 package edu.calvin.cs262.hp46;
 
+import android.util.Log;
+
 import com.mashape.unirest.http.HttpResponse;
 import com.mashape.unirest.http.JsonNode;
 import com.mashape.unirest.http.Unirest;
@@ -40,11 +42,12 @@ public class NetworkUtils {
 
     //returns a json object of numRecipes recipes
     public static JSONObject getRandomRecipe(int numRecipes) throws UnirestException {
+
         String numberString = String.valueOf(numRecipes);
         HttpResponse<JsonNode> response;
         response = Unirest.get("https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/random?number=" + numberString)
                 .header("X-RapidAPI-Host", "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com")
-                .header("X-RapidAPI-Key", "YOUR OWN RAPID API SPOONACULAR KEY")
+                .header("X-RapidAPI-Key", "157988faa0mshc85633e27821365p1fd0a4jsn0b0e96477e8f")
                 .asJson();
         return response.getBody().getObject();
     }

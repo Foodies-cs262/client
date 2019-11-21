@@ -5,15 +5,27 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.widget.EditText;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import org.json.JSONObject;
+
 import java.util.ArrayList;
 
-public class SearchedRecipe extends AppCompatActivity implements CustomAdapter.CustomViewHolder.OnNoteLister {
-    private ArrayList<DataModel> mExampleList;
+/******************************************/          //Everything needed to access the api is denoted by these surrounding brackets
+import androidx.loader.app.LoaderManager;
+import androidx.loader.content.Loader;
+/******************************************/
+
+                                                                                                              /***************************************/
+public class SearchedRecipe extends AppCompatActivity implements CustomAdapter.CustomViewHolder.OnNoteLister, LoaderManager.LoaderCallbacks<JSONObject> {
+    private ArrayList<DataModel> mExampleList;                                                                /***************************************/
 
     private RecyclerView mRecyclerView;
     private CustomAdapter mAdapter;
@@ -46,7 +58,41 @@ public class SearchedRecipe extends AppCompatActivity implements CustomAdapter.C
             }
         });
 
+        /*******************************************************************/
+        //start loader, loader won't start using getLoader()
+        getSupportLoaderManager().initLoader(0, null, this);  //deprecated but still works
+        /*******************************************************************/
+
     }
+
+/**************************************************************************************/
+    @NonNull
+    @Override
+    public Loader<JSONObject> onCreateLoader(int i, @Nullable Bundle bundle) {
+        //TODO: for the search functionality, you are going to want to use types, take advantage of the Bundle type
+        //TODO: Verify if there is wifi, nice error handling
+        return new FoodLoader(this, "getRandomRecipe", 1, "");
+    }
+
+    @Override
+    public void onLoadFinished(@NonNull Loader<JSONObject> loader, JSONObject j) {
+        try {
+            //testing if communicating properly with API
+            Log.d("here", FoodDetails.getTitleRand(j,0));
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    @Override
+    public void onLoaderReset(@NonNull Loader<JSONObject> loader) {
+        // empty method - abstract
+    }
+
+    /**************************************************************************************/
+
 
     private void filter(String text) {
         ArrayList<DataModel> filteredList = new ArrayList<>();
