@@ -62,7 +62,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomView
         DataModel currentItem = mCustomList.get(position);
 
         holder.mImageView1.setImageResource(currentItem.getImage());
-        holder.mImageView2.setImageResource(currentItem.getImage());
+        //holder.mImageView2.setImageResource(currentItem.getImage());
         holder.mTextView1.setText(currentItem.getRecipe_name());
     }
 
