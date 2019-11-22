@@ -5,7 +5,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.util.Log;
 import android.widget.EditText;
 
 import androidx.annotation.NonNull;
@@ -133,7 +132,7 @@ public class SearchedRecipe extends AppCompatActivity implements CustomAdapter.C
         mExampleList.add(new DataModel(6,"Little Meat Loaves",R.drawable.image_needed,
                 "https://www.allrecipes.com/recipe/18798/little-meat-loaves/?internalSource=hub%20recipe&referringContentType=Search/", null));
         mExampleList.add(new DataModel(7,"Roasted Rack of Lamb",R.drawable.image_needed,
-                "https://www.allrecipes.com/recipe/45641/roasted-rack-of-lamb/?internalSource=hub%20recipe&referringContentType=Search/", null));
+                "https://www.allrecipes.com/recipe/45641/roasted-rack-of-lambrack-of-lamb/?internalSource=hub%20recipe&referringContentType=Search/", null));
     }
 
     private void buildRecyclerView() {
