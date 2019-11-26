@@ -1,40 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_marginBottom="4dp"
     app:cardCornerRadius="4dp">
+
+
     <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="407dp"
+        android:layout_height="186dp"
         android:layout_margin="4dp">
+
         <ImageView
             android:id="@+id/childImg"
-            android:layout_width="80dp"
-            android:padding="1dp"
+            android:layout_width="135dp"
+            android:layout_height="116dp"
             android:layout_centerVertical="true"
-            android:layout_height="60dp" />
+            android:padding="1dp" />
 
         <TextView
             android:id="@+id/childTv"
-            android:layout_width="280dp"
+            android:layout_width="226dp"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="79dp"
             android:layout_toRightOf="@+id/childImg"
             android:padding="5dp"
             android:text="Child Item"
             android:textColor="#000"
-            android:textSize="20dp" />
+            android:textSize="20dp"
+            android:textStyle="bold" />
 
         <ImageView
             android:id="@+id/childButton"
-            android:layout_width="49dp"
-            android:layout_height="38dp"
+            android:layout_width="66dp"
+            android:layout_height="57dp"
             android:layout_alignParentEnd="true"
-            android:layout_centerVertical="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="13dp"
+            android:layout_marginBottom="59dp"
             android:scaleType="fitCenter"
             android:src="@drawable/plus" />
+
+        <ImageView
+            android:id="@+id/boarder"
+            android:layout_width="136dp"
+            android:layout_height="115dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="-1dp"
+            android:layout_marginLeft="-1dp"
+            android:layout_marginTop="35dp"
+            app:srcCompat="@drawable/cirlce_imageview" />
     </RelativeLayout>
 </androidx.cardview.widget.CardView>

@@ -9,6 +9,7 @@ import android.widget.EditText;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -34,6 +35,12 @@ public class SearchedRecipe extends AppCompatActivity implements CustomAdapter.C
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        ActionBar actionbar = getSupportActionBar();
+        if (actionbar != null)
+        {
+            actionbar.setBackgroundDrawable(getResources().getDrawable(R.drawable.gradient));
+        }
         setContentView(R.layout.activity_searched);
 
         createExampleList();
