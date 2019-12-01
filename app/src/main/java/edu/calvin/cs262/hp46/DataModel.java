@@ -2,6 +2,8 @@
 
 package edu.calvin.cs262.hp46;
 
+import org.json.JSONArray;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,11 +14,11 @@ public class DataModel {
     private int image;
     private String recipe_name;
     private String url;
-    private List<Ingredient> ingredient;
+    private JSONArray ingredient;
 
     // Constructor for DataModel object
     // Contains ID, recipe name, image URL, URL link for recipe, and Ingredient object
-    public DataModel(int id, String recipe, int image, String url, List<Ingredient> ingredient) {
+    public DataModel(int id, String recipe, int image, String url, JSONArray ingredient) {
         this.setId(id);
         this.setRecipe_name(recipe);
         this.setImage(image);
@@ -61,11 +63,11 @@ public class DataModel {
     }
 
     // setter and getter for ingredient object
-    public List<Ingredient> getIngredient() {
-        return new ArrayList<>(ingredient);
+    public JSONArray getIngredient() {
+        return ingredient;
     }
 
-    public void setIngredient(List<Ingredient> ingredient) {
+    public void setIngredient(JSONArray ingredient) {
         this.ingredient = ingredient;
     }
 }

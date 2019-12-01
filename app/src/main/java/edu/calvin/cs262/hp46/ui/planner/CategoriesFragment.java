@@ -45,7 +45,7 @@ public class CategoriesFragment extends Fragment {
 //                myImageButton.setOnClickListener(new View.OnClickListener() {
 //                    @Override
 //                    public void onClick(View view) {
-//                        Intent intentLoadActivity = new Intent (getActivity(), SearchedRecipe.class);
+//                        Intent intentLoadActivity = new Intent (getActivity(), RandomRecipe.class);
 //                        startActivity(intentLoadActivity);
 //                    }
 //                });
