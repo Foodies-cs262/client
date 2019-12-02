@@ -10,7 +10,7 @@ import java.util.List;
 public class DataModel {
 
     // Initiate variables
-    private long id;
+    private int id;
     private int image;
     private String recipe_name;
     private String url;
@@ -36,7 +36,7 @@ public class DataModel {
     }
 
     // setter & getter for recipe ID
-    public long getId() {
+    public int getId() {
         return id;
     }
 
