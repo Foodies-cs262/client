@@ -7,11 +7,40 @@
     android:orientation="vertical"
     tools:context="edu.calvin.cs262.hp46.RandomRecipe">
 
-    <EditText
-        android:id="@+id/edittext"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"/>
+        android:layout_height="70dp">
+
+
+        <EditText
+            android:id="@+id/edittext"
+            android:layout_width="282dp"
+            android:layout_height="42dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="13dp"
+            android:layout_marginLeft="13dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginBottom="14dp" />
+
+        <ImageButton
+            android:id="@+id/search"
+            android:layout_width="83dp"
+            android:layout_height="44dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="22dp"
+            android:layout_marginRight="22dp"
+            android:layout_marginBottom="11dp"
+            android:src="@drawable/plus">
+
+        </ImageButton>
+
+    </RelativeLayout>
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"

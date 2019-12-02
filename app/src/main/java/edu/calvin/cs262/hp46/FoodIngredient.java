@@ -9,27 +9,26 @@ import androidx.room.PrimaryKey;
 public class FoodIngredient {
 
     @PrimaryKey
-    @NonNull
-    @ColumnInfo(name = "ID")
-    private int uniqueID;
+    @ColumnInfo(name = "fiID")
+    private int fiID;
 
-    @ColumnInfo(name = "IngredientID")
-    private int IngredientID;
-
-    @ColumnInfo(name = "FoodID")
+    @ColumnInfo(name = "fID")
     private int FoodID;
 
-    @ColumnInfo(name = "Name")
-    private double quantity;
+    @ColumnInfo(name = "iID")
+    private int IngredientID;
 
-    public FoodIngredient(@NonNull int uID, int foodId, int inqId, double quan) {
-        this.uniqueID = uID;
-        this.FoodID = foodId;
-        this.IngredientID = inqId;
-        this.quantity = quan;
+    @ColumnInfo(name = "quantity")
+    private double Quantity;
+
+    public FoodIngredient(@NonNull int fiID, int FoodID, int IngredientID, double Quantity) {
+        this.fiID = fiID;
+        this.FoodID = FoodID;
+        this.IngredientID = IngredientID;
+        this.Quantity = Quantity;
     }
 
-    public int getUID(){ return this.uniqueID;}
+    public int getFiID() { return this.fiID;}
 
     public int getFoodID() {
         return this.FoodID;
@@ -40,7 +39,7 @@ public class FoodIngredient {
     }
 
     public double getQuantity() {
-        return this.quantity;
+        return this.Quantity;
     }
 
 }
