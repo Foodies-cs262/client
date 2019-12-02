@@ -14,20 +14,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cb5dfbc4-405d-4cf7-8e89-e2ec2118f86a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../.gradle/5.4.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../.gradle/5.4.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.gradle/5.4.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../.gradle/5.4.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.gradle/5.4.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../.gradle/5.4.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.gradle/5.4.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../.gradle/5.4.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.gradle/5.4.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../.gradle/5.4.1/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/calvin/cs262/hp46/CustomAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/calvin/cs262/hp46/CustomAdapter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/calvin/cs262/hp46/NetworkUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/calvin/cs262/hp46/NetworkUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/calvin/cs262/hp46/RandomRecipe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/calvin/cs262/hp46/RandomRecipe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/calvin/cs262/hp46/ui/search/SearchFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/calvin/cs262/hp46/ui/search/SearchFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/layout/activity_searched.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_searched.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -59,11 +47,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/calvin/cs262/hp46/SearchedRecipe.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1096">
-              <caret line="141" selection-start-line="141" selection-end-line="141" />
+            <state relative-caret-position="-684">
+              <caret line="52" column="21" lean-forward="true" selection-start-line="52" selection-start-column="21" selection-end-line="52" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1956#2401#0" expanded="true" />
                 <element signature="e#2400#2401#0" expanded="true" />
                 <element signature="e#4574#4575#0" expanded="true" />
               </folding>
@@ -74,21 +61,22 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/calvin/cs262/hp46/CustomAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="740">
-              <caret line="38" selection-start-line="38" selection-end-line="38" />
+            <state relative-caret-position="1376">
+              <caret line="75" column="35" lean-forward="true" selection-start-line="75" selection-start-column="35" selection-end-line="75" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1452#1453#0" expanded="true" />
                 <element signature="e#1522#1523#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/calvin/cs262/hp46/FoodDetails.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2016">
-              <caret line="142" column="46" selection-start-line="142" selection-start-column="28" selection-end-line="142" selection-end-column="46" />
+            <state relative-caret-position="1860">
+              <caret line="93" column="24" lean-forward="true" selection-start-line="93" selection-start-column="24" selection-end-line="93" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -168,8 +156,16 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/calvin/cs262/hp46/FoodIngredient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+            <state relative-caret-position="600">
+              <caret line="33" column="31" lean-forward="true" selection-start-line="33" selection-start-column="31" selection-end-line="33" selection-end-column="31" />
+              <folding>
+                <element signature="e#621#622#0" expanded="true" />
+                <element signature="e#655#656#0" expanded="true" />
+                <element signature="e#691#692#0" expanded="true" />
+                <element signature="e#731#732#0" expanded="true" />
+                <element signature="e#766#767#0" expanded="true" />
+                <element signature="e#802#803#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -183,11 +179,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/calvin/cs262/hp46/NetworkUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="959">
-              <caret line="60" column="26" lean-forward="true" selection-start-line="60" selection-start-column="26" selection-end-line="60" selection-end-column="26" />
+            <state relative-caret-position="799">
+              <caret line="52" column="5" lean-forward="true" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -247,15 +243,15 @@
         <option value="$PROJECT_DIR$/src/main/java/edu/calvin/cs262/hp46/DataModel.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/calvin/cs262/hp46/Picasso.java" />
         <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/calvin/cs262/hp46/CustomAdapter.java" />
         <option value="$PROJECT_DIR$/src/main/res/layout/fragment_shoppinglist.xml" />
         <option value="$PROJECT_DIR$/src/main/java/edu/calvin/cs262/hp46/RandomRecipe.java" />
         <option value="$PROJECT_DIR$/src/main/res/layout/activity_random.xml" />
         <option value="$PROJECT_DIR$/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/src/main/java/edu/calvin/cs262/hp46/ui/search/SearchFragment.java" />
         <option value="$PROJECT_DIR$/src/main/res/layout/activity_searched.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/calvin/cs262/hp46/NetworkUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/calvin/cs262/hp46/SearchedRecipe.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/calvin/cs262/hp46/CustomAdapter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/calvin/cs262/hp46/NetworkUtils.java" />
       </list>
     </option>
   </component>
@@ -486,7 +482,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.49502262" visible="true" weight="0.20860566" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.49502262" visible="true" weight="0.20860566" />
       <window_info id="Structure" order="2" sideWeight="0.5049774" side_tool="true" weight="0.13454546" />
       <window_info id="Favorites" order="3" sideWeight="0.50121063" side_tool="true" weight="0.32987013" />
       <window_info id="Build Variants" order="4" side_tool="true" />
@@ -495,7 +491,7 @@
       <window_info id="Resources Explorer" order="7" sideWeight="0.49773756" weight="0.32987013" />
       <window_info id="Capture Tool" order="8" />
       <window_info anchor="bottom" id="Run" order="0" weight="0.32977098" />
-      <window_info active="true" anchor="bottom" id="Logcat" order="1" visible="true" weight="0.32825977" />
+      <window_info anchor="bottom" id="Logcat" order="1" visible="true" weight="0.32825977" />
       <window_info anchor="bottom" id="TODO" order="2" weight="0.32818848" />
       <window_info anchor="bottom" id="Debug" order="3" />
       <window_info anchor="bottom" id="Terminal" order="4" weight="0.32876712" />
@@ -772,36 +768,63 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/calvin/cs262/hp46/DataModel.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/calvin/cs262/hp46/RandomRecipe.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="760">
-          <caret line="51" column="50" lean-forward="true" selection-start-line="51" selection-start-column="50" selection-end-line="51" selection-end-column="50" />
+        <state relative-caret-position="1000">
+          <caret line="76" column="52" selection-start-line="76" selection-start-column="37" selection-end-line="76" selection-end-column="52" />
           <folding>
-            <element signature="e#1225#1226#0" expanded="true" />
-            <element signature="e#1271#1272#0" expanded="true" />
-            <element signature="e#1360#1361#0" expanded="true" />
-            <element signature="e#1386#1387#0" expanded="true" />
-            <element signature="e#1424#1425#0" expanded="true" />
-            <element signature="e#1454#1455#0" expanded="true" />
-            <element signature="e#1541#1542#0" expanded="true" />
-            <element signature="e#1574#1575#0" expanded="true" />
-            <element signature="e#1629#1630#0" expanded="true" />
-            <element signature="e#1673#1674#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/calvin/cs262/hp46/NetworkUtils.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/calvin/cs262/hp46/SearchedRecipe.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="959">
-          <caret line="60" column="26" lean-forward="true" selection-start-line="60" selection-start-column="26" selection-end-line="60" selection-end-column="26" />
+        <state relative-caret-position="-684">
+          <caret line="52" column="21" lean-forward="true" selection-start-line="52" selection-start-column="21" selection-end-line="52" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2400#2401#0" expanded="true" />
+            <element signature="e#4574#4575#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/calvin/cs262/hp46/CustomAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1376">
+          <caret line="75" column="35" lean-forward="true" selection-start-line="75" selection-start-column="35" selection-end-line="75" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1452#1453#0" expanded="true" />
+            <element signature="e#1522#1523#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/calvin/cs262/hp46/ui/search/SearchFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="36" column="62" selection-start-line="36" selection-start-column="62" selection-end-line="36" selection-end-column="62" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2418#2419#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/calvin/cs262/hp46/FoodIngredient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        <state relative-caret-position="600">
+          <caret line="33" column="31" lean-forward="true" selection-start-line="33" selection-start-column="31" selection-end-line="33" selection-end-column="31" />
+          <folding>
+            <element signature="e#621#622#0" expanded="true" />
+            <element signature="e#655#656#0" expanded="true" />
+            <element signature="e#691#692#0" expanded="true" />
+            <element signature="e#731#732#0" expanded="true" />
+            <element signature="e#766#767#0" expanded="true" />
+            <element signature="e#802#803#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -809,6 +832,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="460">
           <caret line="32" column="47" selection-start-line="32" selection-start-column="47" selection-end-line="32" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/calvin/cs262/hp46/FoodDetails.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1860">
+          <caret line="93" column="24" lean-forward="true" selection-start-line="93" selection-start-column="24" selection-end-line="93" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -833,58 +866,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/calvin/cs262/hp46/CustomAdapter.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/calvin/cs262/hp46/DataModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="740">
-          <caret line="38" selection-start-line="38" selection-end-line="38" />
+        <state relative-caret-position="760">
+          <caret line="51" column="50" lean-forward="true" selection-start-line="51" selection-start-column="50" selection-end-line="51" selection-end-column="50" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1522#1523#0" expanded="true" />
+            <element signature="e#1225#1226#0" expanded="true" />
+            <element signature="e#1271#1272#0" expanded="true" />
+            <element signature="e#1360#1361#0" expanded="true" />
+            <element signature="e#1386#1387#0" expanded="true" />
+            <element signature="e#1424#1425#0" expanded="true" />
+            <element signature="e#1454#1455#0" expanded="true" />
+            <element signature="e#1541#1542#0" expanded="true" />
+            <element signature="e#1574#1575#0" expanded="true" />
+            <element signature="e#1629#1630#0" expanded="true" />
+            <element signature="e#1673#1674#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/calvin/cs262/hp46/SearchedRecipe.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/calvin/cs262/hp46/NetworkUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1096">
-          <caret line="141" selection-start-line="141" selection-end-line="141" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1956#2401#0" expanded="true" />
-            <element signature="e#2400#2401#0" expanded="true" />
-            <element signature="e#4574#4575#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/calvin/cs262/hp46/ui/search/SearchFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="36" column="62" selection-start-line="36" selection-start-column="62" selection-end-line="36" selection-end-column="62" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2418#2419#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/calvin/cs262/hp46/RandomRecipe.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1000">
-          <caret line="76" column="52" selection-start-line="76" selection-start-column="37" selection-end-line="76" selection-end-column="52" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/calvin/cs262/hp46/FoodDetails.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2016">
-          <caret line="142" column="46" selection-start-line="142" selection-start-column="28" selection-end-line="142" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="799">
+          <caret line="52" column="5" lean-forward="true" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
         </state>
       </provider>
     </entry>

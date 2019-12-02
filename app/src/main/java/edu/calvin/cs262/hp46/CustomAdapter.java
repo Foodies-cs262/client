@@ -71,11 +71,13 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomView
         return mCustomList.size();
     }
 
+    // Method used to filter the recipe list
     public void filterList(ArrayList<DataModel> filteredList) {
         mCustomList = filteredList;
         notifyDataSetChanged();
     }
 
+    // Creates new list of recipe after retrieving data from RapidAPI
     public void newList(ArrayList<DataModel> newList) {
         mCustomList = newList;
         notifyDataSetChanged();
