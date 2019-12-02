@@ -5,23 +5,31 @@ import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
-@Entity(primaryKeys = {"FoodID", "IngredientID"})
+@Entity(tableName = "FoodIngredient_table")
 public class FoodIngredient {
 
     @PrimaryKey
     @NonNull
     @ColumnInfo(name = "ID")
-    private int FoodID;
+    private int uniqueID;
+
+    @ColumnInfo(name = "IngredientID")
     private int IngredientID;
+
+    @ColumnInfo(name = "FoodID")
+    private int FoodID;
 
     @ColumnInfo(name = "Name")
     private double quantity;
 
-    public FoodIngredient(@NonNull int foodId, int inqId, double quan) {
+    public FoodIngredient(@NonNull int uID, int foodId, int inqId, double quan) {
+        this.uniqueID = uID;
         this.FoodID = foodId;
         this.IngredientID = inqId;
         this.quantity = quan;
     }
+
+    public int getUID(){ return this.uniqueID;}
 
     public int getFoodID() {
         return this.FoodID;
