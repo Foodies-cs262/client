@@ -35,54 +35,59 @@ public abstract class database extends RoomDatabase {
         }
         return INSTANCE;
     }
-//    private static RoomDatabase.Callback sRoomDatabaseCallback =
-//            new RoomDatabase.Callback(){
+    private static RoomDatabase.Callback sRoomDatabaseCallback =
+            new RoomDatabase.Callback(){
+
+                @Override
+                public void onOpen (@NonNull SupportSQLiteDatabase db){
+                    super.onOpen(db);
+                    new PopulateDbAsync(INSTANCE).execute();
+                }
+            };
+
+    private static class PopulateDbAsync extends AsyncTask<Void, Void, Void> {
+
+        private final fDao FDao;
+        private final iDao IDao;
+        private final fiDao FiDao;
+
+        PopulateDbAsync(database db) {
+            FDao = db.FDao();
+            IDao = db.IDao();
+            FiDao = db.FiDao();
+        }
+
+        @Override
+        protected Void doInBackground(final Void... params) {
+
+            FDao.deleteAllFood();
+            IDao.deleteAllIngredient();
+            FiDao.deleteFoodIngredient();
+
+
+//            // If we have no persons, then create the initial list of persons
+//            if (FDao.getAllFood().length < 1) {
+//                Log.d("DO IN BACKGROOUND DB", "doInBackground: NO PEOPLE YET");
+////                personDao.insert(new Person(
+////                        1234,
+////                        "ini23@students.calvin.edu",
+////                        "password123",
+////                        "",
+////                        false,
+////                        "",
+////                        false,
+////                        null,
+////                        false,
+////                        "",
+////                        false,
+////                        false,
+////                        false)
+////                );
+//            } else {
+//                Log.d("DO IN BACKGROOUND DB", "doInBackground: ALREADY HAVE PERSON");
+//            }
 //
-//                @Override
-//                public void onOpen (@NonNull SupportSQLiteDatabase db){
-//                    super.onOpen(db);
-//                    new PopulateDbAsync(INSTANCE).execute();
-//                }
-//            };
-//
-//    private static class PopulateDbAsync extends AsyncTask<Void, Void, Void> {
-//
-//        private final fDao FDao;
-//        private final iDao IDao;
-//        private final fiDao FiDao;
-//
-//        PopulateDbAsync(database db) {
-//            FDao = db.FDao();
-//            IDao = db.IDao();
-//            FiDao = db.FiDao();
-//        }
-//
-//        @Override
-//        protected Void doInBackground(final Void... params) {
-//
-////            // If we have no persons, then create the initial list of persons
-////            if (FDao.getAllFood().length < 1) {
-////                Log.d("DO IN BACKGROOUND DB", "doInBackground: NO PEOPLE YET");
-//////                personDao.insert(new Person(
-//////                        1234,
-//////                        "ini23@students.calvin.edu",
-//////                        "password123",
-//////                        "",
-//////                        false,
-//////                        "",
-//////                        false,
-//////                        null,
-//////                        false,
-//////                        "",
-//////                        false,
-//////                        false,
-//////                        false)
-//////                );
-////            } else {
-////                Log.d("DO IN BACKGROOUND DB", "doInBackground: ALREADY HAVE PERSON");
-////            }
-////
-//            return null;
-//        }
-//    }
+            return null;
+        }
+    }
 }

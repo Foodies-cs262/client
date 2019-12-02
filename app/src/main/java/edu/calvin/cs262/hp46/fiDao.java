@@ -16,7 +16,7 @@ public interface fiDao {
     void insert( FoodIngredient foodIngredient);
 
     @Query("DELETE FROM Food_table")
-    void deleteAll();
+    void deleteFoodIngredient();
 
     @Delete
     void deleteFoodIngredient (FoodIngredient foodIngredient);
