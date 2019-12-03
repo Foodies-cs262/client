@@ -9,11 +9,23 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProviders;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.ArrayList;
+
+import edu.calvin.cs262.hp46.CustomAdapter;
+import edu.calvin.cs262.hp46.DataModel;
 import edu.calvin.cs262.hp46.R;
 import edu.calvin.cs262.hp46.SharedViewModel;
 
 public class HomeFragment extends Fragment {
+    private ArrayList<DataModel> mExampleList;                                                                /***************************************/
+    private ArrayList<DataModel> emptyList = new ArrayList<>();
+
+    private RecyclerView mRecyclerView;
+    private CustomAdapter mAdapter;
+    private RecyclerView.LayoutManager mLayoutManager;
 
     private HomeViewModel homeViewModel;
     //private TextView tv;
@@ -26,6 +38,15 @@ public class HomeFragment extends Fragment {
         View root = inflater.inflate(R.layout.fragment_home, container, false);
         //super.onCreate(savedInstanceState);
         SharedViewModel model = ViewModelProviders.of(getActivity()).get(SharedViewModel.class);
+
+        private void buildRecyclerView() {
+        mRecyclerView = findViewById(R.id.recyclerView);
+        mRecyclerView.setHasFixedSize(true);
+        mLayoutManager = new LinearLayoutManager(this);
+        mAdapter = new CustomAdapter(mExampleList, this);
+
+        mRecyclerView.setLayoutManager(mLayoutManager);
+        mRecyclerView.setAdapter(mAdapter);
         //tv = (TextView)getView().findViewById(R.id.list_result);
         //model.getSelected().observe(this,  item -> {tv.setText("hi")        });
 

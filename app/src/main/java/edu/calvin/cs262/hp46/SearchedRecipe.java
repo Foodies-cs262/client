@@ -3,13 +3,13 @@ package edu.calvin.cs262.hp46;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
+import android.util.Log;
+import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageButton;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -18,90 +18,98 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-/******************************************/          //Everything needed to access the api is denoted by these surrounding brackets
+//Everything needed to access the api is denoted by these surrounding brackets
 import androidx.loader.app.LoaderManager;
 import androidx.loader.content.Loader;
-/******************************************/
 
-                                                                                                              /***************************************/
-public class SearchedRecipe extends AppCompatActivity implements CustomAdapter.CustomViewHolder.OnNoteLister, LoaderManager.LoaderCallbacks<JSONObject> {
-    private ArrayList<DataModel> mExampleList;                                                                /***************************************/
 
+public class SearchedRecipe extends AppCompatActivity implements CustomAdapter.CustomViewHolder.OnNoteLister,
+        LoaderManager.LoaderCallbacks<JSONObject> {
+    final private int NUMBER_OF_ITEMS = 20;
+    private int QUERY_API_ID = 0;
+    private int URL_API_ID = 1;
+
+    // Creates empty DataModel list and String text for initialization (prevents nullpoint error)
+    private ArrayList<DataModel> emptyList = new ArrayList<>();
+    private String text = "";
+
+    private ArrayList<DataModel> mExampleList;
     private RecyclerView mRecyclerView;
     private CustomAdapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        ActionBar actionbar = getSupportActionBar();
-        if (actionbar != null)
-        {
-            actionbar.setBackgroundDrawable(getResources().getDrawable(R.drawable.gradient));
-        }
         setContentView(R.layout.activity_searched);
 
-        createExampleList();
+        // Create an empty recipe list to prevent null reference
+        createExampleList(emptyList);
         buildRecyclerView();
 
-        EditText editText = findViewById(R.id.edittext);
-        editText.addTextChangedListener(new TextWatcher() {
+        // Listen to the text change and filter the recipeList
+        ImageButton searchButton = findViewById(R.id.search);
+
+        searchButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            public void onClick(View view) {
+                EditText editText = findViewById(R.id.edittext);
+                text = editText.getText().toString();
 
-            }
+                Bundle queryBundle = new Bundle();
+                queryBundle.putString("queryString", text);
 
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-                filter(s.toString());
+                getSupportLoaderManager().restartLoader(QUERY_API_ID, queryBundle, SearchedRecipe.this);
             }
         });
+        Bundle queryBundle = new Bundle();
+        queryBundle.putString("queryString", "");
 
-
-        /*******************************************************************/
         //start loader, loader won't start using getLoader()
-        getSupportLoaderManager().initLoader(0, null, this);  //deprecated but still works
-        /*******************************************************************/
+        getSupportLoaderManager().initLoader(0, queryBundle, this);  //deprecated but still works
 
+        Log.i("Search", text);
     }
 
-/**************************************************************************************/
+
     @NonNull
     @Override
-    public Loader<JSONObject> onCreateLoader(int i, @Nullable Bundle bundle) {
+    public Loader<JSONObject> onCreateLoader(int id, @Nullable Bundle bundle) {
         //TODO: for the search functionality, you are going to want to use types, take advantage of the Bundle type
         //TODO: Verify if there is wifi, nice error handling
-        return new FoodLoader(this, "getRecipeInfo", 211419, "");
+        if (id == 0){
+            Log.i("Search", bundle.getString("queryString"));
+            return new FoodLoader(this, "searchRecipe", NUMBER_OF_ITEMS, bundle.getString("queryString"));
+
+        }
+        else{
+            return new FoodLoader(this, "getRecipeInfo",bundle.getInt("queryID"), null);
+        }
     }
 
     @Override
     public void onLoadFinished(@NonNull Loader<JSONObject> loader, JSONObject j) {
-        /*try {
-            //testing if communicating properly with API
-            Log.d("here", FoodDetails.getTitleInfo(j));
-            //testing if getting correct number of ingredients
-            Log.d("here2",Integer.toString(   IngredientDetails.getNumIngredients( FoodDetails.getIngredientsInfo(j) )  )  );
-            //testing if getting proper id of 1st ingredient
-            Log.d ("here3", Integer.toString( IngredientDetails.getIngredientID( FoodDetails.getIngredientsInfo(j), 0 )) );
-            //testing if getting proper name of 1st ingredient
-            Log.d ("here4", IngredientDetails.getIngredientName( FoodDetails.getIngredientsInfo(j), 0 ));
-            //testing if getting proper amount for first ingredient
-            Log.d("here5",Integer.toString(   IngredientDetails.getIngredientAmount( FoodDetails.getIngredientsInfo(j), 0 )  )  );
-            //testing if getting proper unit for first ingredient
-            Log.d ("here6", IngredientDetails.getIngredientUnit( FoodDetails.getIngredientsInfo(j), 0 ));
+        int id = loader.getId();
+        if (id == 0){
+            ArrayList<DataModel> newList = new ArrayList<>();
+            for (int i = 0; i < NUMBER_OF_ITEMS; i++) {
+                newList.add(new DataModel(FoodDetails.getIDSearch(j, i), FoodDetails.getTitleSearch(j, i), R.drawable.image_needed,
+                        null, null));
+            }
+
+            createExampleList(newList);
+            buildRecyclerView();
+        }
+        if (id == 1) {
+            Log.i("URL", FoodDetails.getSourceUrlInfo(j));
+
+            Intent intent = new Intent();
+            intent.setAction(Intent.ACTION_VIEW);
+            intent.addCategory(Intent.CATEGORY_BROWSABLE);
+            intent.setData(Uri.parse(FoodDetails.getSourceUrlInfo(j)));
+            startActivity(intent);
 
         }
-        catch (Exception e) {
-            e.printStackTrace();
-        }*/
-
     }
 
     @Override
@@ -109,9 +117,7 @@ public class SearchedRecipe extends AppCompatActivity implements CustomAdapter.C
         // empty method - abstract
     }
 
-    /**************************************************************************************/
-
-
+    // Rebuild the list based on the filter keywords
     private void filter(String text) {
         ArrayList<DataModel> filteredList = new ArrayList<>();
 
@@ -124,22 +130,8 @@ public class SearchedRecipe extends AppCompatActivity implements CustomAdapter.C
         mAdapter.filterList(filteredList);
     }
 
-    private void createExampleList() {
-        mExampleList = new ArrayList<>();
-        mExampleList.add(new DataModel(1,"Pancake",R.drawable.fluffypancakes,
-                "https://www.allrecipes.com/recipe/21014/good-old-fashioned-pancakes/", null));
-        mExampleList.add(new DataModel(2,"Toast",R.drawable.cinnamon_french_toast,
-                "https://www.allrecipes.com/recipe/7016/french-toast-i/", null));
-        mExampleList.add(new DataModel(3,"Eggs & Bacon",R.drawable.eggs_bacon,
-                "https://www.allrecipes.com/recipe/236040/bacon-and-egg-muffins/", null));
-        mExampleList.add(new DataModel(4,"Chicken Meatballs and Spaghetti",R.drawable.image_needed,
-                "https://www.allrecipes.com/recipe/189576/chicken-meatballs-and-spaghetti/?internalSource=hub%20recipe&referringContentType=Search", null));
-        mExampleList.add(new DataModel(5,"Best Steak Marinade in Existence",R.drawable.image_needed,
-                "https://www.allrecipes.com/recipe/143809/best-steak-marinade-in-existence/", null));
-        mExampleList.add(new DataModel(6,"Little Meat Loaves",R.drawable.image_needed,
-                "https://www.allrecipes.com/recipe/18798/little-meat-loaves/?internalSource=hub%20recipe&referringContentType=Search/", null));
-        mExampleList.add(new DataModel(7,"Roasted Rack of Lamb",R.drawable.image_needed,
-                "https://www.allrecipes.com/recipe/45641/roasted-rack-of-lambrack-of-lamb/?internalSource=hub%20recipe&referringContentType=Search/", null));
+    private void createExampleList(ArrayList<DataModel> newList) {
+        mExampleList = newList;
     }
 
     private void buildRecyclerView() {
@@ -155,109 +147,11 @@ public class SearchedRecipe extends AppCompatActivity implements CustomAdapter.C
     // https://www.youtube.com/watch?v=69C1ljfDvl0
     @Override
     public void onNoteClick(int position) {
+        Log.i("position", Integer.toString(position));
         DataModel datamodel = mExampleList.get(position);
 
-        Intent intent = new Intent();
-        intent.setAction(Intent.ACTION_VIEW);
-        intent.addCategory(Intent.CATEGORY_BROWSABLE);
-        intent.setData(Uri.parse(datamodel.getUrl()));
-        startActivity(intent);
+        Bundle idBundle = new Bundle();
+        idBundle.putInt("queryID", datamodel.getId());
+        getSupportLoaderManager().initLoader(URL_API_ID, idBundle, this);
     }
 }
-
-//import android.content.Intent;
-//import android.net.Uri;
-//import android.os.Bundle;
-//import android.view.Menu;
-//import android.view.MenuItem;
-//import android.view.View;
-//import android.widget.AdapterView;
-//import android.widget.ListView;
-//
-//import androidx.appcompat.app.AppCompatActivity;
-//
-//import com.google.android.material.bottomnavigation.BottomNavigationView;
-//
-//import java.util.ArrayList;
-//
-//// Expandable ListView from http://tutorialscache.com/expandable-listview-android-tutorials/
-//public class SearchedRecipe extends AppCompatActivity {
-//
-//    ArrayList<DataModel> dataModels;
-//    ListView listView;
-//    private static CustomAdapter adapter;
-//
-//    @Override
-//    protected void onCreate(Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_searched);
-////        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-//        BottomNavigationView navView = findViewById(R.id.nav_view);
-//        // Passing each menu ID as a set of Ids because each
-//        // menu should be considered as top level destinations.
-////        AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
-////                R.id.navigation_home, R.id.navigation_search, R.id.navigation_categories, R.id.navigation_shoppinglist)
-////                .build();
-////        NavController navController = Navigation.findNavController(main, R.id.nav_host_fragment);
-////        NavigationUI.setupActionBarWithNavController(main, navController, appBarConfiguration);
-////        NavigationUI.setupWithNavController(navView, navController);
-//
-//        listView=(ListView)findViewById(R.id.list);
-//
-//        dataModels= new ArrayList<>();
-//
-//        dataModels.add(new DataModel(1,"Pancake",R.drawable.fluffypancakes,
-//                "https://www.allrecipes.com/recipe/21014/good-old-fashioned-pancakes/", null));
-//        dataModels.add(new DataModel(2,"Toast",R.drawable.cinnamon_french_toast,
-//                "https://www.allrecipes.com/recipe/7016/french-toast-i/", null));
-//        dataModels.add(new DataModel(3,"Eggs & Bacon",R.drawable.eggs_bacon,
-//                "https://www.allrecipes.com/recipe/236040/bacon-and-egg-muffins/", null));
-//        dataModels.add(new DataModel(4,"Chicken Meatballs and Spaghetti",R.drawable.image_needed,
-//                "https://www.allrecipes.com/recipe/189576/chicken-meatballs-and-spaghetti/?internalSource=hub%20recipe&referringContentType=Search", null));
-//        dataModels.add(new DataModel(5,"Best Steak Marinade in Existence",R.drawable.image_needed,
-//                "https://www.allrecipes.com/recipe/143809/best-steak-marinade-in-existence/", null));
-//        dataModels.add(new DataModel(6,"Little Meat Loaves",R.drawable.image_needed,
-//                "https://www.allrecipes.com/recipe/18798/little-meat-loaves/?internalSource=hub%20recipe&referringContentType=Search/", null));
-//        dataModels.add(new DataModel(7,"Roasted Rack of Lamb",R.drawable.image_needed,
-//                "https://www.allrecipes.com/recipe/45641/roasted-rack-of-lamb/?internalSource=hub%20recipe&referringContentType=Search/", null));
-//
-//        adapter= new CustomAdapter(dataModels,getApplicationContext());
-//
-//        listView.setAdapter(adapter);
-//        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//            @Override
-//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//
-//                DataModel dataModel= dataModels.get(position);
-//
-//                Intent intent = new Intent();
-//                intent.setAction(Intent.ACTION_VIEW);
-//                intent.addCategory(Intent.CATEGORY_BROWSABLE);
-//                intent.setData(Uri.parse(dataModel.getUrl()));
-//                startActivity(intent);
-//            }
-//        });
-//    }
-//
-//    @Override
-//    public boolean onCreateOptionsMenu(Menu menu) {
-//        // Inflate the menu; this adds items to the action bar if it is present.
-//        getMenuInflater().inflate(R.menu.menu_main, menu);
-//        return true;
-//    }
-//
-//    @Override
-//    public boolean onOptionsItemSelected(MenuItem item) {
-//        // Handle action bar item clicks here. The action bar will
-//        // automatically handle clicks on the Home/Up button, so long
-//        // as you specify a parent activity in AndroidManifest.xml.
-//        int id = item.getItemId();
-//
-//        //noinspection SimplifiableIfStatement
-//        if (id == R.id.action_settings) {
-//            return true;
-//        }
-//
-//        return super.onOptionsItemSelected(item);
-//    }
-//}
