@@ -2,6 +2,7 @@
 // Adapter class that receives information from the DataModel and show contained information to the end user
 package edu.calvin.cs262.hp46;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,12 +11,15 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.squareup.picasso.Picasso;
+
 import java.util.ArrayList;
 
 
 public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomViewHolder> {
     private ArrayList<DataModel> mCustomList;
     private CustomViewHolder.OnNoteLister mOnnoteLister;
+    private Context context;
 
     public static class CustomViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         public ImageView mImageView1;
@@ -61,9 +65,9 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomView
     public void onBindViewHolder(CustomViewHolder holder, int position) {
         DataModel currentItem = mCustomList.get(position);
 
-        holder.mImageView1.setImageResource(currentItem.getImage());
 //        holder.mImageView2.setImageResource(currentItem.getImage());
         holder.mTextView1.setText(currentItem.getRecipe_name());
+        Picasso.get().load(currentItem.getImage()).resize(120, 60).into(holder.mImageView1);
     }
 
     @Override

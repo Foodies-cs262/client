@@ -93,7 +93,7 @@ public class SearchedRecipe extends AppCompatActivity implements CustomAdapter.C
         if (id == 0){
             ArrayList<DataModel> newList = new ArrayList<>();
             for (int i = 0; i < NUMBER_OF_ITEMS; i++) {
-                newList.add(new DataModel(FoodDetails.getIDSearch(j, i), FoodDetails.getTitleSearch(j, i), R.drawable.image_needed,
+                newList.add(new DataModel(FoodDetails.getIDSearch(j, i), FoodDetails.getTitleSearch(j, i), FoodDetails.getImageSearch(j, i),
                         null, null));
             }
 

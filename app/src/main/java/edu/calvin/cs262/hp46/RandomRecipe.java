@@ -81,7 +81,7 @@ public class RandomRecipe extends AppCompatActivity implements CustomAdapter.Cus
     public void onLoadFinished(@NonNull Loader<JSONObject> loader, JSONObject j) {
         ArrayList<DataModel> newList = new ArrayList<>();
         for(int i=0; i<20; i++){
-            newList.add(new DataModel(FoodDetails.getIDRand(j, i),FoodDetails.getTitleRand(j, i),R.drawable.image_needed,
+            newList.add(new DataModel(FoodDetails.getIDRand(j, i),FoodDetails.getTitleRand(j, i),FoodDetails.getImageRand(j, i),
                     FoodDetails.getSourceUrlRand(j, i), FoodDetails.getIngredientsRand(j, i)));
         }
 
