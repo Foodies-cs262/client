@@ -47,7 +47,7 @@ public class NetworkUtils {
         HttpResponse<JsonNode> response;
         response = Unirest.get("https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/random?number=" + numberString)
                 .header("X-RapidAPI-Host", "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com")
-                .header("X-RapidAPI-Key", "Enter API Key Here")
+                .header("X-RapidAPI-Key", "ea771be10emsh91a59032b6fce74p172e09jsneb79679a5a3f")
                 .asJson();
         return response.getBody().getObject();
     }
