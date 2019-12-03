@@ -2,6 +2,8 @@ package edu.calvin.cs262.hp46;
 
 import android.os.Bundle;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
@@ -20,6 +22,11 @@ public class MainActivity extends AppCompatActivity {
         //hide Action bar
 //        ActionBar actionBar = getSupportActionBar();
 //        actionBar.hide();
+
+        ActionBar actionBar = getSupportActionBar();
+        if (actionBar != null) {
+            actionBar.setBackgroundDrawable(getResources().getDrawable(R.drawable.mygradient));
+        }
 
         BottomNavigationView navView = findViewById(R.id.nav_view);
         /**

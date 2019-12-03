@@ -67,7 +67,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomView
 
 //        holder.mImageView2.setImageResource(currentItem.getImage());
         holder.mTextView1.setText(currentItem.getRecipe_name());
-        Picasso.get().load(currentItem.getImage()).resize(120, 60).into(holder.mImageView1);
+        Picasso.get().load(currentItem.getImage()).resize(120, 120).into(holder.mImageView1);
     }
 
     @Override

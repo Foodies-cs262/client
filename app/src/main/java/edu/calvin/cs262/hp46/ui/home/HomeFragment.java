@@ -4,45 +4,162 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.ViewModelProviders;
+import androidx.recyclerview.widget.ItemTouchHelper;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.ArrayList;
+
+import edu.calvin.cs262.hp46.DataNote;
+import edu.calvin.cs262.hp46.DataNoteInformation;
 import edu.calvin.cs262.hp46.R;
-import edu.calvin.cs262.hp46.SharedViewModel;
 
-public class HomeFragment extends Fragment {
-
-    private HomeViewModel homeViewModel;
-    //private TextView tv;
-
-
-    public View onCreateView(@NonNull LayoutInflater inflater,
-                             ViewGroup container, Bundle savedInstanceState) {
-        homeViewModel =
-                ViewModelProviders.of(this).get(HomeViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_home, container, false);
-        //super.onCreate(savedInstanceState);
-        SharedViewModel model = ViewModelProviders.of(getActivity()).get(SharedViewModel.class);
-        //tv = (TextView)getView().findViewById(R.id.list_result);
-        //model.getSelected().observe(this,  item -> {tv.setText("hi")        });
-
-
-        /*
-            String strtext = getArguments().getString("edttext");
-    return inflater.inflate(R.layout.fragment, container, false);
-<<<<<<< HEAD
-         */
-
-//        LayoutInflater lf = getActivity().getLayoutInflater();
-//        View view =  lf.inflate(R.layout.fragment_home, container, false);
 //
-//        TextView mTextView = (TextView) getView().findViewById(R.id.list_result);
-//        mTextView.setText(getArguments().getString("recipe"));
+//import android.os.Bundle;
+//import android.view.LayoutInflater;
+//import android.view.View;
+//import android.view.ViewGroup;
+//import android.widget.TextView;
+//
+//import androidx.annotation.NonNull;
+//import androidx.fragment.app.Fragment;
+//import androidx.lifecycle.ViewModelProviders;
+//
+//import edu.calvin.cs262.hp46.R;
+//import edu.calvin.cs262.hp46.SharedViewModel;
+//
+//public class HomeFragment extends Fragment {
+//
+//    private HomeViewModel homeViewModel;
+//    //private TextView tv;
+//
+//
+//    public View onCreateView(@NonNull LayoutInflater inflater,
+//                             ViewGroup container, Bundle savedInstanceState) {
+//        homeViewModel =
+//                ViewModelProviders.of(this).get(HomeViewModel.class);
+//        View root = inflater.inflate(R.layout.fragment_home, container, false);
+//        //super.onCreate(savedInstanceState);
+//        SharedViewModel model = ViewModelProviders.of(getActivity()).get(SharedViewModel.class);
+//        //tv = (TextView)getView().findViewById(R.id.list_result);
+//        //model.getSelected().observe(this,  item -> {tv.setText("hi")        });
+//
+//
+//        /*
+//            String strtext = getArguments().getString("edttext");
+//    return inflater.inflate(R.layout.fragment, container, false);
+//<<<<<<< HEAD
+//         */
+//
+////        LayoutInflater lf = getActivity().getLayoutInflater();
+////        View view =  lf.inflate(R.layout.fragment_home, container, false);
+////
+////        TextView mTextView = (TextView) getView().findViewById(R.id.list_result);
+////        mTextView.setText(getArguments().getString("recipe"));
+//
+//        return root;
+//    }
+//
+//}
+public class HomeFragment extends Fragment
+{
+    private RecyclerView mRecyclerView;
+    private ListAdapter mListadapter;
 
-        return root;
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
+    {
+        View view = inflater.inflate(R.layout.fragment_list, container, false);
+
+        mRecyclerView = (RecyclerView) view.findViewById(R.id.recyclerView);
+
+        final LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
+        layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
+        mRecyclerView.setLayoutManager(layoutManager);
+
+        ArrayList data = new ArrayList<DataNote>();
+        for (int i = 0; i < DataNoteInformation.id.length; i++)
+        {
+            data.add(
+                    new DataNote
+                            (
+                                    DataNoteInformation.id[i],
+                                    DataNoteInformation.textArray[i],
+                                    DataNoteInformation.dateArray[i]
+                            ));
+        }
+
+        mListadapter = new ListAdapter(data);
+        mRecyclerView.setAdapter(mListadapter);
+
+        return view;
     }
 
+    public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder>
+    {
+        private ArrayList<DataNote> dataList;
+
+        public ListAdapter(ArrayList<DataNote> data)
+        {
+            this.dataList = data;
+        }
+
+        public class ViewHolder extends RecyclerView.ViewHolder
+        {
+            TextView textViewText;
+            TextView textViewComment;
+            TextView textViewDate;
+
+            public ViewHolder(View itemView)
+            {
+                super(itemView);
+                this.textViewText = (TextView) itemView.findViewById(R.id.text);
+                this.textViewComment = (TextView) itemView.findViewById(R.id.comment);
+                this.textViewDate = (TextView) itemView.findViewById(R.id.date);
+            }
+        }
+
+        @Override
+        public ListAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType)
+        {
+            View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recyclerview_item, parent, false);
+
+            ViewHolder viewHolder = new ViewHolder(view);
+            return viewHolder;
+        }
+
+        @Override
+        public void onBindViewHolder(ListAdapter.ViewHolder holder, final int position)
+        {
+            holder.textViewText.setText(dataList.get(position).getText());
+            holder.textViewComment.setText(dataList.get(position).getComment());
+            holder.textViewDate.setText(dataList.get(position).getDate());
+
+            holder.textViewText.setOnClickListener(new View.OnClickListener()
+            {
+                @Override
+                public void onClick(View v)
+                {
+                    deleteNote(dataList.get(position));
+                }
+            });
+        }
+
+        private void deleteNote(DataNote note) {
+            dataList.remove(note);
+            mListadapter.notifyDataSetChanged();
+        }
+
+        @Override
+        public int getItemCount()
+        {
+            return dataList.size();
+        }
+    }
 }
