@@ -20,4 +20,5 @@
     <string name="egss">Eggs and Bacon</string>
     <string name="steak">Best Steak Marinade in Existence</string>
     <string name="lamn">Roasted Rack of Lamb</string>
+    <string name="NO_INFORMATION">no information</string>
 </resources>

@@ -11,14 +11,14 @@ public class DataModel {
 
     // Initiate variables
     private int id;
-    private int image;
+    private String image;
     private String recipe_name;
     private String url;
     private JSONArray ingredient;
 
     // Constructor for DataModel object
     // Contains ID, recipe name, image URL, URL link for recipe, and Ingredient object
-    public DataModel(int id, String recipe, int image, String url, JSONArray ingredient) {
+    public DataModel(int id, String recipe, String image, String url, JSONArray ingredient) {
         this.setId(id);
         this.setRecipe_name(recipe);
         this.setImage(image);
@@ -27,11 +27,11 @@ public class DataModel {
     }
 
     // setter & getter for recipe image
-    public int getImage() {
+    public String getImage() {
         return image;
     }
 
-    public void setImage(int image) {
+    public void setImage(String image) {
         this.image = image;
     }
 
