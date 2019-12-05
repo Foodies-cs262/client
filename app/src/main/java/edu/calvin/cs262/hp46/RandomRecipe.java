@@ -6,11 +6,15 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.EditText;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -22,6 +26,10 @@ import java.util.ArrayList;
 /******************************************/          //Everything needed to access the api is denoted by these surrounding brackets
 import androidx.loader.app.LoaderManager;
 import androidx.loader.content.Loader;
+
+import edu.calvin.cs262.hp46.ui.home.HomeFragment;
+import edu.calvin.cs262.hp46.ui.search.SearchFragment;
+import edu.calvin.cs262.hp46.ui.shoppinglist.ShoppinglistFragment;
 /******************************************/
 
                                                                                                               /***************************************/
@@ -37,6 +45,15 @@ public class RandomRecipe extends AppCompatActivity implements CustomAdapter.Cus
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_random);
+
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        ActionBar actionBar = getSupportActionBar();
+        if (actionBar != null) {
+            actionBar.setBackgroundDrawable(getResources().getDrawable(R.drawable.mygradient));
+            toolbar.setTitleTextColor(0xFFFFFFFF);
+        }
 
         /*******************************************************************/
         //start loader, loader won't start using getLoader()
@@ -134,5 +151,36 @@ public class RandomRecipe extends AppCompatActivity implements CustomAdapter.Cus
         intent.addCategory(Intent.CATEGORY_BROWSABLE);
         intent.setData(Uri.parse(datamodel.getUrl()));
         startActivity(intent);
+    }
+
+    // creating tabs on action bar
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+      // Inflate the menu; this adds items to the action bar if it is present.
+      getMenuInflater().inflate(R.menu.menu_main, menu);
+      return true;
+    }
+
+    //action bar button
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+      switch(item.getItemId()) {
+          case R.id.navigation_search:
+              Intent search = new Intent(this, SearchFragment.class);
+              this.startActivity(search);
+              break;
+          case R.id.navigation_home:
+              Intent home = new Intent(this, HomeFragment.class);
+              this.startActivity(home);
+              break;
+          case R.id.navigation_shoppinglist:
+              Intent list = new Intent(this, ShoppinglistFragment.class);
+              this.startActivity(list);
+              break;
+          default:
+              return super.onOptionsItemSelected(item);
+      }
+
+      return true;
     }
 }
