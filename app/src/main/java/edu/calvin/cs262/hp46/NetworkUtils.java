@@ -47,7 +47,7 @@ public class NetworkUtils {
         HttpResponse<JsonNode> response;
         response = Unirest.get("https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/random?number=" + numberString)
                 .header("X-RapidAPI-Host", "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com")
-                .header("X-RapidAPI-Key", "Enter API Key Here")
+                .header("X-RapidAPI-Key", "04183e7b83msh7f88580709fb63ep1e0365jsn97288810da81")
                 .asJson();
         return response.getBody().getObject();
     }
@@ -57,7 +57,7 @@ public class NetworkUtils {
         String numberString = String.valueOf(numRecipes);
         HttpResponse<JsonNode> response = Unirest.get("https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/search?number=" + numberString + "&query=" + query)
                 .header("x-rapidapi-host", "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com")
-                .header("x-rapidapi-key", "Enter API Key Here")
+                .header("x-rapidapi-key", "04183e7b83msh7f88580709fb63ep1e0365jsn97288810da81")
                 .asJson();
         return response.getBody().getObject();
     }
@@ -66,7 +66,7 @@ public class NetworkUtils {
     public static JSONObject getRecipeInfo(int id) throws UnirestException {
         HttpResponse<JsonNode> response = Unirest.get("https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/" + id + "/information")
                 .header("x-rapidapi-host", "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com")
-                .header("x-rapidapi-key", "Enter API Key Here")
+                .header("x-rapidapi-key", "04183e7b83msh7f88580709fb63ep1e0365jsn97288810da81")
                 .asJson();
         return response.getBody().getObject();
     }
