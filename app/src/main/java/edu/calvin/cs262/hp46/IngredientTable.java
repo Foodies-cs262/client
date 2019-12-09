@@ -16,12 +16,12 @@ public class IngredientTable {
     @ColumnInfo(name = "Name")
     private String name;
 
-    public IngredientTable(@NonNull int id, String inputName) {
-        this.IngredientID = id;
-        this.name = inputName;
+    public IngredientTable(@NonNull int IngredientID, String name) {
+        this.IngredientID = IngredientID;
+        this.name = name;
     }
 
-    public int getID() {
+    public int getIngredientID() {
         return this.IngredientID;
     }
 
