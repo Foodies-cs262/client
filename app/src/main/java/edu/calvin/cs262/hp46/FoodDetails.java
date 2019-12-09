@@ -1,8 +1,16 @@
 package edu.calvin.cs262.hp46;
 
+import android.util.Log;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+import java.util.Random;
 
 public class FoodDetails {
 
@@ -48,6 +56,41 @@ public class FoodDetails {
             e.printStackTrace();
             return null;
         }
+    }
+
+    //getTags rand takes the JSONObject, the index of the desired recipe, and the maxNumber of tags you want returned
+    //Note: size may vary recipe to recipe. For example, given a max of 3 you could get a list of 0 or 1 or 2 or 3
+    public static List<String> getTagsRand(JSONObject foodObject, int index, int maxNumTags) throws JSONException {
+        List<String> tagsList = new ArrayList<String>();
+        JSONObject myObject = foodObject.getJSONArray("recipes").getJSONObject(index);
+        Iterator<String> keys = myObject.keys();
+        while (keys.hasNext()) {
+            String key = keys.next();
+            try {
+                if ( myObject.getString(key) == "true"){
+                    tagsList.add(key);
+                }
+            } catch (JSONException e) {
+                e.printStackTrace();
+                return null;
+            }
+        }
+       return randomizeTags(tagsList, maxNumTags);
+    }
+
+    //function randomly indexes into tagsList and puts those values into another list a maxNumTags number of times or less
+    //helper function for getTagsRand()
+    public static List<String> randomizeTags(List<String> tagsList, int maxNumTags){
+        List<String> randomTagsList = new ArrayList<String>();
+        Random rand = new Random();
+        int count = 0;
+        while (tagsList.size() > 0 && count < maxNumTags){
+            int randInt = rand.nextInt(tagsList.size());
+            randomTagsList.add(count, tagsList.get(randInt));
+            tagsList.remove(randInt);
+            count++;
+        }
+        return randomTagsList;
     }
 
     //get ingredients, this is used if operating on an object returned from the getRandomRecipe() function
