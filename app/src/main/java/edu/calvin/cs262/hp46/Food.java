@@ -16,11 +16,11 @@ public class Food {
     @ColumnInfo(name = "Name")
     private String name;
 
-    public Food(@NonNull int id, String inputName) {
-        this.foodID = id;
-        this.name = inputName;
+    public Food(@NonNull int foodID, String name) {
+        this.foodID = foodID;
+        this.name = name;
     }
 
-    public int getID(){return this.foodID;}
-    public  String getName(){return  this.name;}
+    public int getFoodID(){return this.foodID;}
+    public String getName(){return  this.name;}
 }
