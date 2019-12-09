@@ -47,6 +47,15 @@ public class RandomRecipe extends AppCompatActivity implements CustomAdapter.Cus
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_random);
 
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        ActionBar actionBar = getSupportActionBar();
+        if (actionBar != null) {
+            actionBar.setBackgroundDrawable(getResources().getDrawable(R.drawable.mygradient));
+            toolbar.setTitleTextColor(0xFFFFFFFF);
+        }
+
         //start loader, loader won't start using getLoader()
         getSupportLoaderManager().initLoader(0, null, this);  //deprecated but still works
 
