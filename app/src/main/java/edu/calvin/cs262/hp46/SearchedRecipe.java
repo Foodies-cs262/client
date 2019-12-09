@@ -12,9 +12,7 @@ import android.widget.ImageButton;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -26,14 +24,12 @@ import java.util.ArrayList;
 import androidx.loader.app.LoaderManager;
 import androidx.loader.content.Loader;
 
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-
 import edu.calvin.cs262.hp46.ui.home.HomeFragment;
 import edu.calvin.cs262.hp46.ui.search.SearchFragment;
 import edu.calvin.cs262.hp46.ui.shoppinglist.ShoppinglistFragment;
 
 
-public class SearchedRecipe extends AppCompatActivity implements CustomAdapter.CustomViewHolder.OnNoteLister,
+public class SearchedRecipe extends AppCompatActivity implements CustomAdapter.CustomViewHolder.OnNoteLister, CustomAdapter.CustomViewHolder.OnNoteLister2,
         LoaderManager.LoaderCallbacks<JSONObject> {
     final private int NUMBER_OF_ITEMS = 20;
     private int QUERY_API_ID = 0;
@@ -52,15 +48,6 @@ public class SearchedRecipe extends AppCompatActivity implements CustomAdapter.C
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_searched);
-
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-
-        ActionBar actionBar = getSupportActionBar();
-        if (actionBar != null) {
-            toolbar.setTitleTextColor(0xFFFFFFFF);
-            actionBar.setBackgroundDrawable(getResources().getDrawable(R.drawable.mygradient));
-        }
 
         // Create an empty recipe list to prevent null reference
         createExampleList(emptyList);
@@ -109,6 +96,7 @@ public class SearchedRecipe extends AppCompatActivity implements CustomAdapter.C
     @Override
     public void onLoadFinished(@NonNull Loader<JSONObject> loader, JSONObject j) {
         int id = loader.getId();
+        // Build a recipe list
         if (id == 0){
             ArrayList<DataModel> newList = new ArrayList<>();
             for (int i = 0; i < NUMBER_OF_ITEMS; i++) {
@@ -119,7 +107,9 @@ public class SearchedRecipe extends AppCompatActivity implements CustomAdapter.C
             createExampleList(newList);
             buildRecyclerView();
         }
+        // Get URL and open up the appropriate webpage
         if (id == 1) {
+            int count = 1;
             Log.i("URL", FoodDetails.getSourceUrlInfo(j));
 
             Intent intent = new Intent();
@@ -127,14 +117,13 @@ public class SearchedRecipe extends AppCompatActivity implements CustomAdapter.C
             intent.addCategory(Intent.CATEGORY_BROWSABLE);
             intent.setData(Uri.parse(FoodDetails.getSourceUrlInfo(j)));
             startActivity(intent);
-            this.finish();
-
+            super.onBackPressed();
         }
     }
 
     @Override
     public void onLoaderReset(@NonNull Loader<JSONObject> loader) {
-        // empty method - abstract
+
     }
 
     // Rebuild the list based on the filter keywords
@@ -150,15 +139,17 @@ public class SearchedRecipe extends AppCompatActivity implements CustomAdapter.C
         mAdapter.filterList(filteredList);
     }
 
+    // Set global recipe list with updated list
     private void createExampleList(ArrayList<DataModel> newList) {
         mExampleList = newList;
     }
 
+    // build and display recyclerView to the viewer
     private void buildRecyclerView() {
         mRecyclerView = findViewById(R.id.recyclerView);
         mRecyclerView.setHasFixedSize(true);
         mLayoutManager = new LinearLayoutManager(this);
-        mAdapter = new CustomAdapter(mExampleList, this);
+        mAdapter = new CustomAdapter(mExampleList, this, this);
 
         mRecyclerView.setLayoutManager(mLayoutManager);
         mRecyclerView.setAdapter(mAdapter);
@@ -173,6 +164,12 @@ public class SearchedRecipe extends AppCompatActivity implements CustomAdapter.C
         Bundle idBundle = new Bundle();
         idBundle.putInt("queryID", datamodel.getId());
         getSupportLoaderManager().initLoader(URL_API_ID, idBundle, this);
+    }
+
+    public void onNoteClick2(int position) {
+        DataModel datamodel = mExampleList.get(position);
+        Log.i("information", datamodel.getRecipe_name());
+
     }
 
     // creating tabs on action bar

@@ -2,10 +2,11 @@
 // Adapter class that receives information from the DataModel and show contained information to the end user
 package edu.calvin.cs262.hp46;
 
-import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -19,7 +20,7 @@ import java.util.ArrayList;
 public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomViewHolder> {
     private ArrayList<DataModel> mCustomList;
     private CustomViewHolder.OnNoteLister mOnnoteLister;
-    private Context context;
+    private CustomViewHolder.OnNoteLister2 mOnnoteLister2;
 
     public static class CustomViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         public ImageView mImageView1;
@@ -27,37 +28,50 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomView
         public TextView mTextView1;
 
         OnNoteLister onNoteLister;
+        OnNoteLister2 onNoteLister2;
 
-        public CustomViewHolder(View itemView, OnNoteLister onNoteLister) {
+        public CustomViewHolder(View itemView, OnNoteLister onNoteLister, OnNoteLister2 onNoteLister2) {
             super(itemView);
             mImageView1 = itemView.findViewById(R.id.childImg);
             mImageView2 = itemView.findViewById(R.id.childButton);
             mTextView1 = itemView.findViewById(R.id.childTv);
             this.onNoteLister = onNoteLister;
+            this.onNoteLister2 = onNoteLister2;
 
+            mImageView2.setOnClickListener(this);
             itemView.setOnClickListener(this);
         }
         // https://www.youtube.com/watch?v=69C1ljfDvl0
         @Override
         public void onClick(View view) {
-            onNoteLister.onNoteClick(getAdapterPosition());
+            if (view.getId() == mImageView2.getId()){
+                onNoteLister2.onNoteClick2(getAdapterPosition());
+            }
+            else{
+                onNoteLister.onNoteClick(getAdapterPosition());
+            }
         }
 
         public interface OnNoteLister{
             void onNoteClick(int position);
         }
+
+        public interface OnNoteLister2{
+            void onNoteClick2(int position);
+        }
     }
 
-    public CustomAdapter(ArrayList<DataModel> exampleList, CustomViewHolder.OnNoteLister onNoteLister) {
+    public CustomAdapter(ArrayList<DataModel> exampleList, CustomViewHolder.OnNoteLister onNoteLister, CustomViewHolder.OnNoteLister2 onNoteLister2) {
         mCustomList = exampleList;
         this.mOnnoteLister = onNoteLister;
+        this.mOnnoteLister2 = onNoteLister2;
     }
 
     @Override
     public CustomViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.child_item,
                 parent, false);
-        CustomViewHolder evh = new CustomViewHolder(v, mOnnoteLister);
+        CustomViewHolder evh = new CustomViewHolder(v, mOnnoteLister, mOnnoteLister2);
         return evh;
     }
 
@@ -65,9 +79,8 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomView
     public void onBindViewHolder(CustomViewHolder holder, int position) {
         DataModel currentItem = mCustomList.get(position);
 
-//        holder.mImageView2.setImageResource(currentItem.getImage());
         holder.mTextView1.setText(currentItem.getRecipe_name());
-        Picasso.get().load(currentItem.getImage()).resize(120, 120).into(holder.mImageView1);
+        Picasso.get().load(currentItem.getImage()).resize(120, 60).into(holder.mImageView1);
     }
 
     @Override

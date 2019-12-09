@@ -25,18 +25,17 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
-/******************************************/          //Everything needed to access the api is denoted by these surrounding brackets
 import androidx.loader.app.LoaderManager;
 import androidx.loader.content.Loader;
 
 import edu.calvin.cs262.hp46.ui.home.HomeFragment;
 import edu.calvin.cs262.hp46.ui.search.SearchFragment;
 import edu.calvin.cs262.hp46.ui.shoppinglist.ShoppinglistFragment;
-/******************************************/
 
-                                                                                                              /***************************************/
-public class RandomRecipe extends AppCompatActivity implements CustomAdapter.CustomViewHolder.OnNoteLister, LoaderManager.LoaderCallbacks<JSONObject> {
-    private ArrayList<DataModel> mExampleList;                                                                /***************************************/
+
+public class RandomRecipe extends AppCompatActivity implements CustomAdapter.CustomViewHolder.OnNoteLister,
+        CustomAdapter.CustomViewHolder.OnNoteLister2,LoaderManager.LoaderCallbacks<JSONObject> {
+    private ArrayList<DataModel> mExampleList;
     private ArrayList<DataModel> emptyList = new ArrayList<>();
 
     private RecyclerView mRecyclerView;
@@ -48,19 +47,8 @@ public class RandomRecipe extends AppCompatActivity implements CustomAdapter.Cus
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_random);
 
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-
-        ActionBar actionBar = getSupportActionBar();
-        if (actionBar != null) {
-            actionBar.setBackgroundDrawable(getResources().getDrawable(R.drawable.mygradient));
-            toolbar.setTitleTextColor(0xFFFFFFFF);
-        }
-
-        /*******************************************************************/
         //start loader, loader won't start using getLoader()
         getSupportLoaderManager().initLoader(0, null, this);  //deprecated but still works
-        /*******************************************************************/
 
         // Create an empty recipe list to prevent null reference
         createExampleList(emptyList);
@@ -85,8 +73,6 @@ public class RandomRecipe extends AppCompatActivity implements CustomAdapter.Cus
             }
         });
     }
-
-/**************************************************************************************/
 
     @NonNull
     @Override
@@ -113,8 +99,6 @@ public class RandomRecipe extends AppCompatActivity implements CustomAdapter.Cus
         // empty method - abstract
     }
 
-    /**************************************************************************************/
-
 
     private void filter(String text) {
         ArrayList<DataModel> filteredList = new ArrayList<>();
@@ -136,7 +120,7 @@ public class RandomRecipe extends AppCompatActivity implements CustomAdapter.Cus
         mRecyclerView = findViewById(R.id.recyclerView);
         mRecyclerView.setHasFixedSize(true);
         mLayoutManager = new LinearLayoutManager(this);
-        mAdapter = new CustomAdapter(mExampleList, this);
+        mAdapter = new CustomAdapter(mExampleList, this, this);
 
         mRecyclerView.setLayoutManager(mLayoutManager);
         mRecyclerView.setAdapter(mAdapter);
@@ -153,6 +137,12 @@ public class RandomRecipe extends AppCompatActivity implements CustomAdapter.Cus
         intent.addCategory(Intent.CATEGORY_BROWSABLE);
         intent.setData(Uri.parse(datamodel.getUrl()));
         startActivity(intent);
+    }
+    public void onNoteClick2(int position) {
+        DataModel datamodel = mExampleList.get(position);
+        Log.i("information", datamodel.getRecipe_name());
+
+
     }
 
     // creating tabs on action bar
