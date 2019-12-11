@@ -197,17 +197,9 @@ public class SearchedRecipe extends AppCompatActivity implements CustomAdapter.C
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch(item.getItemId()) {
-            case R.id.navigation_search:
-                Intent search = new Intent(this, SearchFragment.class);
-                this.startActivity(search);
-                break;
             case R.id.navigation_home:
-                Intent home = new Intent(this, HomeFragment.class);
-                this.startActivity(home);
-                break;
-            case R.id.navigation_shoppinglist:
-                Intent list = new Intent(this, ShoppinglistFragment.class);
-                this.startActivity(list);
+                Intent search = new Intent(this, MainActivity.class);
+                this.startActivity(search);
                 break;
             default:
                 return super.onOptionsItemSelected(item);

@@ -168,17 +168,9 @@ public class RandomRecipe extends AppCompatActivity implements CustomAdapter.Cus
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
       switch(item.getItemId()) {
-          case R.id.navigation_search:
-              Intent search = new Intent(this, SearchFragment.class);
-              this.startActivity(search);
-              break;
           case R.id.navigation_home:
-              Intent home = new Intent(this, HomeFragment.class);
+              Intent home = new Intent(this, MainActivity.class);
               this.startActivity(home);
-              break;
-          case R.id.navigation_shoppinglist:
-              Intent list = new Intent(this, ShoppinglistFragment.class);
-              this.startActivity(list);
               break;
           default:
               return super.onOptionsItemSelected(item);

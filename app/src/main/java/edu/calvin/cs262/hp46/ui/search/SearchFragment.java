@@ -32,8 +32,8 @@ public class SearchFragment extends Fragment {
                 ViewModelProviders.of(this).get(SearchViewModel.class);
         View root = inflater.inflate(R.layout.fragment_search, container, false);
 
-        myImageButton = (ImageButton) root.findViewById(R.id.random_recipe);
-        myImageButton2 = (ImageButton) root.findViewById(R.id.Search);
+        myImageButton = root.findViewById(R.id.random_recipe);
+        myImageButton2 = root.findViewById(R.id.Search);
         myImageButton.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View view) {
