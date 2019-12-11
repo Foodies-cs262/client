@@ -77,7 +77,7 @@ public class HomeFragment extends Fragment
     {
         View view = inflater.inflate(R.layout.fragment_list, container, false);
 
-        mRecyclerView = (RecyclerView) view.findViewById(R.id.recyclerView);
+        mRecyclerView = view.findViewById(R.id.recyclerView);
 
         final LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
@@ -119,9 +119,9 @@ public class HomeFragment extends Fragment
             public ViewHolder(View itemView)
             {
                 super(itemView);
-                this.textViewText = (TextView) itemView.findViewById(R.id.text);
-                this.textViewComment = (TextView) itemView.findViewById(R.id.comment);
-                this.textViewDate = (TextView) itemView.findViewById(R.id.date);
+                this.textViewText = itemView.findViewById(R.id.text);
+                this.textViewComment = itemView.findViewById(R.id.comment);
+                this.textViewDate = itemView.findViewById(R.id.date);
             }
         }
 
