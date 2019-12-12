@@ -185,15 +185,6 @@ public class SearchedRecipe extends AppCompatActivity implements CustomAdapter.C
     public void onNoteClick2(int position) {
         DataModel datamodel = mExampleList.get(position);
         Log.i("information", datamodel.getRecipe_name());
-//        String a;
-//        for (int i = 0; i < 1; i++) {
-//            try{
-//                a = IngredientDetails.getIngredientName(datamodel.getIngredient(), i);
-//                Log.i("index", a);
-//            } catch(IndexOutOfBoundsException e){
-//                Log.i("index", "hello");
-//            }
-//        }
 
     }
 

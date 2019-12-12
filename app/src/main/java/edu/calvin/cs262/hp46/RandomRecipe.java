@@ -18,21 +18,17 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import org.json.JSONArray;
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
-import java.util.List;
 
-/******************************************/          //Everything needed to access the api is denoted by these surrounding brackets
+
+/******************************************/
+//Everything needed to access the api is denoted by these surrounding brackets
 import androidx.loader.app.LoaderManager;
 import androidx.loader.content.Loader;
 
-import edu.calvin.cs262.hp46.ui.home.HomeFragment;
-import edu.calvin.cs262.hp46.ui.search.SearchFragment;
-import edu.calvin.cs262.hp46.ui.shoppinglist.ShoppinglistFragment;
+
 /******************************************/
 
 

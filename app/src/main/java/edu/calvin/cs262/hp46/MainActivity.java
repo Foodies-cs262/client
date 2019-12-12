@@ -18,15 +18,12 @@ public class MainActivity extends AppCompatActivity {
 
 
     @Override
-    // http://www.devcoons.com/android-bottom-navigation-menu-example-using-activities/
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //hide Action bar
-//        ActionBar actionBar = getSupportActionBar();
-//        actionBar.hide();
-
+        // hide action bar
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
             actionBar.setBackgroundDrawable(getResources().getDrawable(R.drawable.mygradient));

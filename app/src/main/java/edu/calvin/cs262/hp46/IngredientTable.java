@@ -2,7 +2,6 @@ package edu.calvin.cs262.hp46;
 
 import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
-import androidx.room.Delete;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 

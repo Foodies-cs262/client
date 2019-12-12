@@ -24,19 +24,10 @@ public class FoodViewModel extends AndroidViewModel {
         mAll = mRepository.getAllQuantity();
     }
 
-//    public void setIngredient(){
-//        mAllIngredient = mRepository.getAllIngredient();
-//    }
-//
-//    public void setQ(){
-//        mAll = mRepository.getallQ();
-//    }
 
     public LiveData<List<Food>> getAllFood() { return mAllFood; }
 
     public LiveData<List<IngredientTable>> getAllIngredient() { return mAllIngredient; }
-//
-//    public LiveData<List<IngredientTable>> getAllQuanttity2() { return mallQuantity;}
 
     public LiveData<List<FoodIngredient>> getAllQuantity() { return mAll; }
 
@@ -46,9 +37,7 @@ public class FoodViewModel extends AndroidViewModel {
 
     public void deleteIngredientTable( IngredientTable ingredientTable){ mRepository.deleteIngredientTable(ingredientTable);}
 
-//    public void updateParam(String name, double amount){mRepository.updateParam(name, amount);}
-//
-//    public void getmyName1(String name){ mRepository.getmyName1(name); }
+
 
 
 }
