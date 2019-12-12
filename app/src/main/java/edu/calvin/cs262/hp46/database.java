@@ -9,7 +9,7 @@ import androidx.room.Room;
 import androidx.room.RoomDatabase;
 import androidx.sqlite.db.SupportSQLiteDatabase;
 
-@Database(entities = {Food.class, IngredientTable.class, FoodIngredient.class}, version = 1, exportSchema = false)
+@Database(entities = {Food.class, IngredientTable.class, FoodIngredient.class}, version = 8, exportSchema = false)
 public abstract class database extends RoomDatabase {
 
     public abstract fDao FDao();

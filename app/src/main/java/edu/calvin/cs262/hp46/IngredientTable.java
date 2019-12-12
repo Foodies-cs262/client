@@ -2,6 +2,7 @@ package edu.calvin.cs262.hp46;
 
 import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
+import androidx.room.Delete;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
@@ -16,9 +17,22 @@ public class IngredientTable {
     @ColumnInfo(name = "Name")
     private String name;
 
-    public IngredientTable(@NonNull int IngredientID, String name) {
+    @ColumnInfo(name = "Quantity")
+    private double quantity;
+
+    @ColumnInfo(name = "unit")
+    private String unit;
+
+    public IngredientTable(@NonNull int IngredientID, String name, double quantity, String unit) {
         this.IngredientID = IngredientID;
         this.name = name;
+        this.quantity = quantity;
+        this.unit = unit;
+    }
+
+
+    public void setQuantity( double quantity) {
+        this.quantity = quantity;
     }
 
     public int getIngredientID() {
@@ -26,7 +40,13 @@ public class IngredientTable {
     }
 
     public String getName() {
-        return  this.name;
+        return this.name;
     }
+
+    public double getQuantity() {
+        return this.quantity;
+    }
+
+    public String getUnit() { return this.unit; }
 
 }

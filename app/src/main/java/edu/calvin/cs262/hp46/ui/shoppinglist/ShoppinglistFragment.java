@@ -1,9 +1,12 @@
 package edu.calvin.cs262.hp46.ui.shoppinglist;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -15,7 +18,11 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
+import java.util.List;
 
+import edu.calvin.cs262.hp46.FoodViewModel;
+import edu.calvin.cs262.hp46.IngredientTable;
+import edu.calvin.cs262.hp46.SearchedRecipe;
 import edu.calvin.cs262.hp46.ShoppingNote;
 import edu.calvin.cs262.hp46.ShoppingNoteInformation;
 import edu.calvin.cs262.hp46.R;
@@ -26,34 +33,46 @@ public class ShoppinglistFragment extends Fragment {
 
     private RecyclerView mRecyclerView;
     private ShoppinglistFragment.ListAdapter mListadapter;
+    private FoodViewModel mWordViewModel;
+    private ImageView mImageView;
 
 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
     {
-        View view = inflater.inflate(R.layout.fragment_list, container, false);
+        View view = inflater.inflate(R.layout.fragment_shoppinglist, container, false);
 
-        mRecyclerView = (RecyclerView) view.findViewById(R.id.recyclerView);
+        mWordViewModel = ViewModelProviders.of(this).get(FoodViewModel.class);
+
+        mRecyclerView = view.findViewById(R.id.recyclerView);
+        mImageView = view.findViewById(R.id.imageView4);
 
         final LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         mRecyclerView.setLayoutManager(layoutManager);
 
-        ArrayList data = new ArrayList<ShoppingNote>();
-        for (int i = 0; i < ShoppingNoteInformation.id.length; i++)
-        {
-            data.add(
-                    new ShoppingNote
-                            (
-                                    ShoppingNoteInformation.id[i],
-                                    ShoppingNoteInformation.textArray[i],
-                                    ShoppingNoteInformation.dateArray[i]
-                            ));
-        }
+        mWordViewModel.getAllIngredient().observe(this, new Observer<List<IngredientTable>>() {
+            @Override
+            public void onChanged(@Nullable final List<IngredientTable> ingredients) {
+                ArrayList data = new ArrayList<ShoppingNote>();
+                // Update the cached copy of the words in the adapter.
+                for (int i = 0; i < ingredients.size(); i++){
+                    data.add(new ShoppingNote(Double.toString(ingredients.get(i).getQuantity()), ingredients.get(i).getName(), ingredients.get(i).getUnit()));
+                    Log.i("DataTable", ingredients.get(i).getName());
+                }
 
-        mListadapter = new ShoppinglistFragment.ListAdapter(data);
-        mRecyclerView.setAdapter(mListadapter);
+                mListadapter = new ListAdapter(data);
+                mRecyclerView.setAdapter(mListadapter);
+            }
+        });
+
+        mImageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mListadapter.deleteAll();
+            }
+        });
 
         return view;
     }
@@ -76,9 +95,9 @@ public class ShoppinglistFragment extends Fragment {
             public ViewHolder(View itemView)
             {
                 super(itemView);
-                this.textViewText = (TextView) itemView.findViewById(R.id.text);
-                this.textViewComment = (TextView) itemView.findViewById(R.id.comment);
-                this.textViewDate = (TextView) itemView.findViewById(R.id.date);
+                this.textViewText = itemView.findViewById(R.id.text);
+                this.textViewComment = itemView.findViewById(R.id.comment);
+                this.textViewDate = itemView.findViewById(R.id.date);
             }
         }
 
@@ -110,6 +129,11 @@ public class ShoppinglistFragment extends Fragment {
 
         private void deleteNote(ShoppingNote note) {
             dataList.remove(note);
+            mListadapter.notifyDataSetChanged();
+        }
+
+        private void deleteAll(){
+            dataList.clear();
             mListadapter.notifyDataSetChanged();
         }
 

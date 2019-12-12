@@ -12,10 +12,17 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".RandomRecipe" android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
-        <activity android:name=".SearchedRecipe" android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
-        <activity android:name=".MainActivity" ></activity>
-        <activity android:name=".Splashscreen" android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity android:name=".infoActivity"></activity>
+        <activity
+            android:name=".RandomRecipe"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".SearchedRecipe"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity android:name=".MainActivity" />
+        <activity
+            android:name=".Splashscreen"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -23,4 +30,5 @@
             </intent-filter>
         </activity>
     </application>
+
 </manifest>

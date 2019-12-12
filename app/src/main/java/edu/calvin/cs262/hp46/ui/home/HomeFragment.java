@@ -1,5 +1,6 @@
 package edu.calvin.cs262.hp46.ui.home;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,16 +10,23 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import edu.calvin.cs262.hp46.DataNote;
 import edu.calvin.cs262.hp46.DataNoteInformation;
+import edu.calvin.cs262.hp46.Food;
+import edu.calvin.cs262.hp46.FoodViewModel;
 import edu.calvin.cs262.hp46.R;
+import edu.calvin.cs262.hp46.SearchedRecipe;
 
 //
 //import android.os.Bundle;
@@ -71,32 +79,63 @@ public class HomeFragment extends Fragment
 {
     private RecyclerView mRecyclerView;
     private ListAdapter mListadapter;
+    private ImageView mImageView;
+
+    private FoodViewModel mWordViewModel;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
     {
         View view = inflater.inflate(R.layout.fragment_list, container, false);
 
-        mRecyclerView = (RecyclerView) view.findViewById(R.id.recyclerView);
+        mWordViewModel = ViewModelProviders.of(this).get(FoodViewModel.class);
+
+        mRecyclerView = view.findViewById(R.id.recyclerView);
+        mImageView = view.findViewById(R.id.imageView4);
+
 
         final LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         mRecyclerView.setLayoutManager(layoutManager);
 
-        ArrayList data = new ArrayList<DataNote>();
-        for (int i = 0; i < DataNoteInformation.id.length; i++)
-        {
-            data.add(
-                    new DataNote
-                            (
-                                    DataNoteInformation.id[i],
-                                    DataNoteInformation.textArray[i],
-                                    DataNoteInformation.dateArray[i]
-                            ));
-        }
+        mWordViewModel.getAllFood().observe(this, new Observer<List<Food>>() {
+            @Override
+            public void onChanged(@Nullable final List<Food> foods) {
+                ArrayList data = new ArrayList<DataNote>();
+                // Update the cached copy of the words in the adapter.
+                for (int i = 0; i < foods.size(); i++){
+                    data.add(new DataNote("del", foods.get(i).getName(), null));
+                }
 
-        mListadapter = new ListAdapter(data);
-        mRecyclerView.setAdapter(mListadapter);
+                mListadapter = new ListAdapter(data);
+                mRecyclerView.setAdapter(mListadapter);
+            }
+        });
+
+
+//        ArrayList data = new ArrayList<DataNote>();
+//        for (int i = 0; i < DataNoteInformation.id.length; i++)
+//        {
+//            data.add(
+//                    new DataNote
+//                            (
+//                                    DataNoteInformation.id[i],
+//                                    DataNoteInformation.textArray[i],
+//                                    DataNoteInformation.dateArray[i]
+//                            ));
+//        }
+//
+//        mListadapter = new ListAdapter(data);
+//        mRecyclerView.setAdapter(mListadapter);
+
+//        mRecyclerView.setAdapter(mListadapter);
+
+        mImageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mListadapter.deleteAll();
+            }
+        });
 
         return view;
     }
@@ -119,9 +158,9 @@ public class HomeFragment extends Fragment
             public ViewHolder(View itemView)
             {
                 super(itemView);
-                this.textViewText = (TextView) itemView.findViewById(R.id.text);
-                this.textViewComment = (TextView) itemView.findViewById(R.id.comment);
-                this.textViewDate = (TextView) itemView.findViewById(R.id.date);
+                this.textViewText = itemView.findViewById(R.id.text);
+                this.textViewComment = itemView.findViewById(R.id.comment);
+                this.textViewDate = itemView.findViewById(R.id.date);
             }
         }
 
@@ -150,9 +189,17 @@ public class HomeFragment extends Fragment
                 }
             });
         }
+        private void setFood(List<Food> foods){
+
+        }
 
         private void deleteNote(DataNote note) {
             dataList.remove(note);
+            mListadapter.notifyDataSetChanged();
+        }
+
+        private void deleteAll(){
+            dataList.clear();
             mListadapter.notifyDataSetChanged();
         }
 

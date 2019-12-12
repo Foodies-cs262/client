@@ -29,9 +29,9 @@ public class IngredientDetails {
         }
     }
 
-    public static int getIngredientAmount(JSONArray ingredients, int index){
+    public static double getIngredientAmount(JSONArray ingredients, int index){
         try {
-            return ingredients.getJSONObject(index).getInt("amount") ;
+            return ingredients.getJSONObject(index).getDouble("amount") ;
         } catch (JSONException e) {
             e.printStackTrace();
             return 0;

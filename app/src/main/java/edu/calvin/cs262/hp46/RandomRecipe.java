@@ -15,6 +15,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -44,10 +45,19 @@ public class RandomRecipe extends AppCompatActivity implements CustomAdapter.Cus
     private CustomAdapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
 
+    private FoodViewModel mWordViewModel;
+    private int count = 0;
+    private int count2 = 0;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_random);
+
+
+        mWordViewModel = ViewModelProviders.of(this).get(FoodViewModel.class);
+
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -153,37 +163,50 @@ public class RandomRecipe extends AppCompatActivity implements CustomAdapter.Cus
         DataModel datamodel = mExampleList.get(position);
         Log.i("information", datamodel.getRecipe_name());
 
+        Food food = new Food (count, datamodel.getRecipe_name());
+        mWordViewModel.insert(food);
 
+        String a;
+        double b;
+        String c;
+        for (int i = 0; i < IngredientDetails.getNumIngredients(datamodel.getIngredient()); i++) {
+            try{
+                a = IngredientDetails.getIngredientName(datamodel.getIngredient(), i);
+                b = IngredientDetails.getIngredientAmount(datamodel.getIngredient(), i);
+                c = IngredientDetails.getIngredientUnit(datamodel.getIngredient(), i);
+                Log.i("index", a);
+                IngredientTable ing = new IngredientTable(count2, a, b, c);
+                mWordViewModel.insert(ing);
+                count2++;
+
+            } catch(IndexOutOfBoundsException e){
+                Log.i("index", "hello");
+            }
+        }
+
+        count++;
     }
 
     // creating tabs on action bar
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-      // Inflate the menu; this adds items to the action bar if it is present.
-      getMenuInflater().inflate(R.menu.menu_main, menu);
-      return true;
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
     }
 
     //action bar button
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-      switch(item.getItemId()) {
-          case R.id.navigation_search:
-              Intent search = new Intent(this, SearchFragment.class);
-              this.startActivity(search);
-              break;
-          case R.id.navigation_home:
-              Intent home = new Intent(this, HomeFragment.class);
-              this.startActivity(home);
-              break;
-          case R.id.navigation_shoppinglist:
-              Intent list = new Intent(this, ShoppinglistFragment.class);
-              this.startActivity(list);
-              break;
-          default:
-              return super.onOptionsItemSelected(item);
-      }
+        switch(item.getItemId()) {
+            case R.id.navigation_home:
+                Intent home = new Intent(this, MainActivity.class);
+                this.startActivity(home);
+                break;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
 
-      return true;
+        return true;
     }
 }
