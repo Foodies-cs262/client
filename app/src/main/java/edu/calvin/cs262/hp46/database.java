@@ -8,7 +8,11 @@ import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 import androidx.sqlite.db.SupportSQLiteDatabase;
-
+/**
+ * @author Hamin Hong
+ * database is the connecting class for all database componets
+ * it acts as an interface for all classes of database to work together.
+ * */
 @Database(entities = {Food.class, IngredientTable.class, FoodIngredient.class}, version = 8, exportSchema = false)
 public abstract class database extends RoomDatabase {
 

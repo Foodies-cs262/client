@@ -9,6 +9,11 @@ import androidx.room.Query;
 
 import java.util.List;
 
+
+/**
+ * @author Hamin Hong
+ * iDao is Dao for ingredient table
+ * */
 @Dao
 public interface iDao {
 

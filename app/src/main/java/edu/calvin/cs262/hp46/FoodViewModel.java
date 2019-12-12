@@ -1,5 +1,11 @@
 package edu.calvin.cs262.hp46;
 
+
+/**
+ * @author Hamin Hong
+ * Food view model makes an connection from the FoodRepo
+ * to whatever client class trying to use the database.
+ * */
 import android.app.Application;
 
 import androidx.lifecycle.AndroidViewModel;

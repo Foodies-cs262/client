@@ -6,7 +6,11 @@ import android.os.AsyncTask;
 import androidx.lifecycle.LiveData;
 
 import java.util.List;
-
+/**
+ * @author Hamin Hong
+ * FoodRepo acts as a class where data are temporarily stored in between
+ * the database and its client classes.
+ * */
 public class FoodRepo {
 
     private fDao mfDao;

@@ -8,6 +8,10 @@ import androidx.room.Query;
 
 import java.util.List;
 
+/**
+ * @author Hamin Hong
+ * fDao is Dao for the Food table
+ * */
 @Dao
 public interface fDao {
 

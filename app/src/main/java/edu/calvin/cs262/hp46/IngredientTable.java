@@ -5,6 +5,11 @@ import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
+
+/**
+ * @author Hamin Hong
+ * IngredientTable is the ingredient table for the databse
+ * */
 @Entity(tableName = "Ingredient_table")
 public class IngredientTable {
 

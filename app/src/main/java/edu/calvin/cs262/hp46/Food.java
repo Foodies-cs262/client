@@ -5,6 +5,11 @@ import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
+
+/**
+ * @author Hamin Hong
+ * Food is the ingredient table for the databse
+ * */
 @Entity(tableName = "Food_table")
 public class Food {
 
