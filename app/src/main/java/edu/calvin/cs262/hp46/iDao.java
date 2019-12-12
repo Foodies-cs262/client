@@ -2,6 +2,7 @@ package edu.calvin.cs262.hp46;
 
 import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
+import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
@@ -19,4 +20,14 @@ public interface iDao {
 
     @Query("SELECT * from ingredient_table ORDER BY Name ASC")
     LiveData<List<IngredientTable>> getAllIngredient();
+
+    @Delete
+    void deleteIngredientTable(IngredientTable ingredientTable);
+
+    @Query("UPDATE Ingredient_table SET Quantity = :q WHERE Name = :n")
+    void updateQuantity(String n, double q);
+
+    @Query("SELECT Name from ingredient_table WHERE Name = :n")
+    String getMyName(String n);
+
 }

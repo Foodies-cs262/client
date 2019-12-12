@@ -1,6 +1,7 @@
 package edu.calvin.cs262.hp46.ui.shoppinglist;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,7 +16,10 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
+import java.util.List;
 
+import edu.calvin.cs262.hp46.FoodViewModel;
+import edu.calvin.cs262.hp46.IngredientTable;
 import edu.calvin.cs262.hp46.ShoppingNote;
 import edu.calvin.cs262.hp46.ShoppingNoteInformation;
 import edu.calvin.cs262.hp46.R;
@@ -26,6 +30,7 @@ public class ShoppinglistFragment extends Fragment {
 
     private RecyclerView mRecyclerView;
     private ShoppinglistFragment.ListAdapter mListadapter;
+    private FoodViewModel mWordViewModel;
 
 
 
@@ -34,27 +39,28 @@ public class ShoppinglistFragment extends Fragment {
     {
         View view = inflater.inflate(R.layout.fragment_list, container, false);
 
+        mWordViewModel = ViewModelProviders.of(this).get(FoodViewModel.class);
+
         mRecyclerView = view.findViewById(R.id.recyclerView);
 
         final LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         mRecyclerView.setLayoutManager(layoutManager);
 
-        ArrayList data = new ArrayList<ShoppingNote>();
-        for (int i = 0; i < ShoppingNoteInformation.id.length; i++)
-        {
-            data.add(
-                    new ShoppingNote
-                            (
-                                    ShoppingNoteInformation.id[i],
-                                    ShoppingNoteInformation.textArray[i],
-                                    ShoppingNoteInformation.dateArray[i]
-                            ));
-        }
+        mWordViewModel.getAllIngredient().observe(this, new Observer<List<IngredientTable>>() {
+            @Override
+            public void onChanged(@Nullable final List<IngredientTable> ingredients) {
+                ArrayList data = new ArrayList<ShoppingNote>();
+                // Update the cached copy of the words in the adapter.
+                for (int i = 0; i < ingredients.size(); i++){
+                    data.add(new ShoppingNote(Double.toString(ingredients.get(i).getQuantity()), ingredients.get(i).getName(), ingredients.get(i).getUnit()));
+                    Log.i("DataTable", ingredients.get(i).getName());
+                }
 
-        mListadapter = new ShoppinglistFragment.ListAdapter(data);
-        mRecyclerView.setAdapter(mListadapter);
-
+                mListadapter = new ListAdapter(data);
+                mRecyclerView.setAdapter(mListadapter);
+            }
+        });
         return view;
     }
 
@@ -103,7 +109,7 @@ public class ShoppinglistFragment extends Fragment {
                 @Override
                 public void onClick(View v)
                 {
-                    deleteNote(dataList.get(position));
+//                    deleteNote(dataList.get(position));
                 }
             });
         }

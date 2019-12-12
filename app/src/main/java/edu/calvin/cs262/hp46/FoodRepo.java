@@ -97,5 +97,71 @@ public class FoodRepo {
             return null;
         }
     }
+
+    private static class deleteIngredientTableAsyncTask extends AsyncTask<IngredientTable, Void, Void> {
+        private iDao mAsyncTaskDao4;
+
+        deleteIngredientTableAsyncTask(iDao dao) {
+            mAsyncTaskDao4 = dao;
+        }
+
+        @Override
+        protected Void doInBackground(final IngredientTable... params) {
+            mAsyncTaskDao4.deleteIngredientTable(params[0]);
+            return null;
+        }
+    }
+
+    public void deleteIngredientTable(IngredientTable ingredientTable)  {
+        new deleteIngredientTableAsyncTask(miDao).execute(ingredientTable);
+    }
+
+    //_______________
+
+
+//    public void updateParam( String name , double amount){
+//
+//        upParams UpParams = new upParams(name,amount);
+//        new updateIngredientTableAsyncTask(miDao).execute(UpParams);
+//    }
+//
+//    private static class updateIngredientTableAsyncTask extends AsyncTask<upParams,Void,Void>{
+//        private iDao mAsyncTaskDao5;
+//
+//        public updateIngredientTableAsyncTask( iDao MIDAO){
+//            mAsyncTaskDao5 = MIDAO;
+//        }
+//
+//        @Override
+//        protected Void doInBackground(upParams... myTaskParams) {
+//            double amount =myTaskParams[0].amount;
+//            String name = myTaskParams[0].name;
+//            mAsyncTaskDao5.updateQuantity(name, amount);
+//            return null;
+//        }
+//    }
+//
+//    public void getmyName1( String name ){
+//
+//        upParams2 UpParams = new upParams2(name);
+//        new getMyNameAsyncTask(miDao).execute(UpParams);
+//    }
+//
+//    private static class getMyNameAsyncTask extends AsyncTask<upParams2,Void,Void>{
+//        private iDao mAsyncTaskDao6;
+//
+//        public getMyNameAsyncTask( iDao MIDAO){
+//            mAsyncTaskDao6 = MIDAO;
+//        }
+//
+//        @Override
+//        protected Void doInBackground(upParams2... myTaskParams) {
+//            String name = myTaskParams[0].name;
+//            mAsyncTaskDao6.getMyName(name);
+//            return null;
+//        }
+//    }
+
+
 }
 

@@ -18,6 +18,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
@@ -31,6 +32,8 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import edu.calvin.cs262.hp46.ui.home.HomeFragment;
 import edu.calvin.cs262.hp46.ui.search.SearchFragment;
 import edu.calvin.cs262.hp46.ui.shoppinglist.ShoppinglistFragment;
+
+import static edu.calvin.cs262.hp46.IngredientDetails.getIngredientName;
 
 
 public class SearchedRecipe extends AppCompatActivity implements CustomAdapter.CustomViewHolder.OnNoteLister, CustomAdapter.CustomViewHolder.OnNoteLister2,
@@ -182,6 +185,15 @@ public class SearchedRecipe extends AppCompatActivity implements CustomAdapter.C
     public void onNoteClick2(int position) {
         DataModel datamodel = mExampleList.get(position);
         Log.i("information", datamodel.getRecipe_name());
+//        String a;
+//        for (int i = 0; i < 1; i++) {
+//            try{
+//                a = IngredientDetails.getIngredientName(datamodel.getIngredient(), i);
+//                Log.i("index", a);
+//            } catch(IndexOutOfBoundsException e){
+//                Log.i("index", "hello");
+//            }
+//        }
 
     }
 
